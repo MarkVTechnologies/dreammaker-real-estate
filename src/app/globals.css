@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* Design tokens — PRD §6.2. Navy and white are the brand; gold is a CTA-only
+   accent. Never place gold text on white (fails WCAG 2.2 AA, PRD §6.2). */
+:root {
+  --navy-950: #05102a;
+  --navy-900: #0a1b3d;
+  --navy-800: #10275a;
+  --navy-700: #1b3a7a;
+  --navy-600: #2a4e9b;
+  --navy-100: #e4eaf6;
+  --navy-50: #f4f7fc;
+
+  --white: #ffffff;
+  --paper: #fafbfd;
+  --ink-900: #0c1220;
+  --ink-600: #4a5468;
+  --ink-300: #c8cfdc;
+
+  --gold-500: #c9a227;
+  --gold-600: #a8861b;
+
+  --success: #1e8e52;
+  --whatsapp: #25d366;
+  --warning: #c77700;
+  --danger: #c0362c;
+
+  --background: var(--paper);
+  --foreground: var(--ink-900);
+}
+
+@theme inline {
+  --color-navy-950: var(--navy-950);
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-navy-700: var(--navy-700);
+  --color-navy-600: var(--navy-600);
+  --color-navy-100: var(--navy-100);
+  --color-navy-50: var(--navy-50);
+
+  --color-white: var(--white);
+  --color-paper: var(--paper);
+  --color-ink-900: var(--ink-900);
+  --color-ink-600: var(--ink-600);
+  --color-ink-300: var(--ink-300);
+
+  --color-gold-500: var(--gold-500);
+  --color-gold-600: var(--gold-600);
+
+  --color-success: var(--success);
+  --color-whatsapp: var(--whatsapp);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+}
+
+/* No dark-mode variant: the brand is a fixed navy/white system (PRD §6.2/§6.3),
+   not an adaptive theme. */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+/* Tabular figures for prices and plot sizes so tables align (PRD §6.3). */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
