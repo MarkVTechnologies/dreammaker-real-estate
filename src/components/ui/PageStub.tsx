@@ -1,3 +1,6 @@
+import { Construction } from "lucide-react";
+import { Reveal } from "./Reveal";
+
 interface PageStubProps {
   title: string;
   intro: string;
@@ -14,12 +17,25 @@ interface PageStubProps {
  */
 export function PageStub({ title, intro, prdRef, todo }: PageStubProps) {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-      <h1 className="font-display text-4xl font-bold text-navy-900">{title}</h1>
-      <p className="mt-4 text-ink-600">{intro}</p>
-      <p className="mt-8 rounded-md border border-dashed border-ink-300 bg-navy-50 p-4 text-sm text-ink-600">
-        <strong>Scaffold note ({prdRef}):</strong> {todo ?? "Content and data wiring pending."}
-      </p>
+    <div className="relative overflow-hidden">
+      <div className="bg-grid-navy pointer-events-none absolute inset-x-0 top-0 h-72 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
+      <div className="relative mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
+        <Reveal>
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-navy-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-navy-700">
+            {prdRef}
+          </span>
+          <h1 className="mt-4 font-display text-4xl font-bold text-navy-900 sm:text-5xl">{title}</h1>
+          <p className="mt-4 max-w-xl text-lg text-ink-600">{intro}</p>
+
+          <div className="mt-10 flex gap-4 rounded-xl border border-dashed border-ink-300 bg-navy-50 p-5">
+            <Construction className="h-5 w-5 shrink-0 text-navy-700" aria-hidden="true" strokeWidth={1.75} />
+            <div>
+              <p className="text-sm font-semibold text-navy-900">In build</p>
+              <p className="mt-1 text-sm text-ink-600">{todo ?? "Content and data wiring pending."}</p>
+            </div>
+          </div>
+        </Reveal>
+      </div>
     </div>
   );
 }

@@ -4,10 +4,11 @@ interface WhatsAppLinkProps {
   message: string;
   className?: string;
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
 /** WhatsApp is first-class in this funnel, not a secondary channel (PRD §10.1). */
-export function WhatsAppLink({ message, className, children }: WhatsAppLinkProps) {
+export function WhatsAppLink({ message, className, children, onClick }: WhatsAppLinkProps) {
   return (
     <a
       href={whatsappLink(message)}
@@ -15,6 +16,7 @@ export function WhatsAppLink({ message, className, children }: WhatsAppLinkProps
       rel="noopener noreferrer"
       className={className}
       data-event="whatsapp_click"
+      onClick={onClick}
     >
       {children}
     </a>

@@ -9,6 +9,11 @@ export default clerkMiddleware(async (auth, req) => {
   }
 });
 
+// Scoped to /portal only — Clerk has no other consumer in this app (the API
+// lives in server/, not src/app/api). The previous sitewide matcher ran
+// clerkMiddleware's dev-browser handshake on every public marketing route,
+// which redirects to an error page whenever the Clerk key is a placeholder
+// (see .env.local.example) instead of a real provisioned app.
 export const config = {
-  matcher: ["/((?!_next|.*\\..*).*)", "/(api|trpc)(.*)"],
+  matcher: ["/portal/:path*"],
 };

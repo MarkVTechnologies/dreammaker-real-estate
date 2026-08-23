@@ -1,0 +1,67 @@
+import Link from "next/link";
+import { ArrowRight, Play, Users } from "lucide-react";
+import { Reveal } from "@/components/ui/Reveal";
+
+/**
+ * Video-authority block, styled after kemchutahomesltd.com's "Watch Our
+ * Story" section (PRD §3.1 baseline), paired with the Founder block PRD
+ * §8.1 module 9 requires (MD Ejieh Paradise, E-E-A-T). No video exists yet
+ * (PRD §6.4) — the player is an honest pending state, not a stand-in clip.
+ */
+export function OurStory() {
+  return (
+    <section className="bg-navy-950 py-20 text-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Reveal className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-wide text-gold-500">Our story</p>
+          <h2 className="mx-auto mt-2 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
+            See why the Lekki–Epe corridor trusts DreamMaker
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-navy-100">
+            Estate developments, allocation days and the people behind them —
+            on camera, not just on paper.
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.1} className="mt-10">
+          <div className="group relative mx-auto flex aspect-video max-w-3xl items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-navy-900">
+            <div className="bg-grid-navy pointer-events-none absolute inset-0 opacity-[0.06]" />
+            <div className="relative flex flex-col items-center gap-3 text-center">
+              <span className="flex h-16 w-16 items-center justify-center rounded-full bg-gold-500 text-navy-950 transition-transform duration-300 group-hover:scale-105">
+                <Play className="h-6 w-6" aria-hidden="true" fill="currentColor" />
+              </span>
+              {/* TODO: one estate walkthrough per month, published with full transcript (PRD §9.6) */}
+              <span className="text-sm font-medium text-navy-200">Estate walkthrough — video pending</span>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal
+          delay={0.15}
+          className="mx-auto mt-12 flex max-w-3xl flex-col gap-6 rounded-2xl border border-white/10 bg-white/5 p-7 sm:flex-row sm:items-center"
+        >
+          <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-navy-800 text-gold-500">
+            <Users className="h-7 w-7" aria-hidden="true" strokeWidth={1.5} />
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wide text-gold-500">
+              From the Managing Director
+            </p>
+            <p className="mt-2 font-display text-lg text-white">
+              {/* TODO: MD Ejieh Paradise one-paragraph statement + Guardian feature link (PRD §3.2, §9.2 Person schema) */}
+              &ldquo;One-paragraph statement pending — link to the Guardian feature once copy is
+              approved.&rdquo;
+            </p>
+            <Link
+              href="/about/leadership"
+              className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-navy-100 hover:text-white"
+            >
+              Read more about our leadership
+              <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+            </Link>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}

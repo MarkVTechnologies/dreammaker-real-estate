@@ -1,3 +1,4 @@
+import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
@@ -33,16 +34,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
-    >
-      <body className="flex min-h-full flex-col bg-paper text-ink-900">
-        <Header />
-        <main className="flex-1 pb-16 md:pb-0">{children}</main>
-        <Footer />
-        <MobileStickyBar />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html
+        lang="en"
+        className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
+      >
+        <body className="flex min-h-full flex-col bg-paper text-ink-900">
+          <Header />
+          <main className="flex-1 pb-16 md:pb-0">{children}</main>
+          <Footer />
+          <MobileStickyBar />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
