@@ -1,0 +1,269 @@
+// DreamMaker Real Estate — data model
+// Mirrors PRD §11.2 (core entities) plus the operational tables needed
+// for the realtor network, lead pipeline and payments (§10, §12).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum EstateStatus {
+  PLANNING
+  ONGOING
+  DELIVERED
+}
+
+enum TitleType {
+  C_OF_O
+  GAZETTE
+  EXCISION
+  REGISTERED_SURVEY
+  GOVERNORS_CONSENT
+  DEED_OF_ASSIGNMENT
+}
+
+enum PlotStatus {
+  AVAILABLE
+  RESERVED
+  SOLD
+}
+
+enum LeadType {
+  INSPECTION
+  VIRTUAL_INSPECTION
+  BROCHURE_DOWNLOAD
+  ROI_CALCULATOR
+  GENERAL
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  INSPECTION_BOOKED
+  INSPECTED
+  CONVERTED
+  LOST
+}
+
+enum RealtorStatus {
+  PENDING
+  ACTIVE
+  SUSPENDED
+}
+
+enum ReferralStage {
+  CLICKED
+  LEAD
+  INSPECTION
+  DEPOSIT
+  ALLOCATED
+}
+
+enum PaymentProvider {
+  PAYSTACK
+  FLUTTERWAVE
+  BANK_TRANSFER
+}
+
+enum PaymentStatus {
+  PENDING
+  SUCCESS
+  FAILED
+}
+
+enum PaymentType {
+  DEPOSIT
+  INSTALMENT
+}
+
+model Estate {
+  id               String       @id @default(cuid())
+  slug             String       @unique
+  name             String
+  state            String       @default("Lagos")
+  lga              String
+  locality         String
+  latitude         Float?
+  longitude        Float?
+  status           EstateStatus @default(ONGOING)
+  titleType        TitleType
+  startingPriceNgn Int
+  depositPercent   Int
+  plotSizesSqm     Int[]
+  paymentPlans     Json?
+  features         Json?
+  documents        Json?
+  gallery          Json?
+  videoUrl         String?
+  landmarks        Json?
+  faqs             Json?
+  seoTitle         String?
+  seoDescription   String?
+
+  plots            Plot[]
+  progressUpdates  ProgressUpdate[]
+  leads            Lead[]
+  referrals        Referral[]
+  payments         Payment[]
+
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([lga, locality])
+}
+
+model Plot {
+  id          String     @id @default(cuid())
+  estateId    String
+  estate      Estate     @relation(fields: [estateId], references: [id], onDelete: Cascade)
+  plotNumber  String
+  sizeSqm     Int
+  priceNgn    Int
+  status      PlotStatus @default(AVAILABLE)
+  orientation String?
+
+  payments    Payment[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([estateId, plotNumber])
+}
+
+model ProgressUpdate {
+  id        String   @id @default(cuid())
+  estateId  String
+  estate    Estate   @relation(fields: [estateId], references: [id], onDelete: Cascade)
+  title     String
+  body      String
+  photos    Json?
+  postedAt  DateTime @default(now())
+}
+
+model Location {
+  id             String   @id @default(cuid())
+  slug           String   @unique
+  name           String
+  parentSlug     String?
+  description    String
+  priceBandLowNgn  Int?
+  priceBandHighNgn Int?
+  priceAsOf      DateTime?
+  drivers        Json?
+  faqs           Json?
+  seoTitle       String?
+  seoDescription String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Author {
+  id        String   @id @default(cuid())
+  name      String
+  jobTitle  String?
+  bio       String?
+  photoUrl  String?
+  sameAs    Json?
+
+  guides    Guide[]
+}
+
+model Guide {
+  id               String    @id @default(cuid())
+  slug             String    @unique
+  title            String
+  category         String
+  authorId         String
+  author           Author    @relation(fields: [authorId], references: [id])
+  body             String
+  directAnswer     String
+  relatedEstateIds Json?
+  relatedGuideIds  Json?
+  seoTitle         String?
+  seoDescription   String?
+  publishedAt      DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+}
+
+model Lead {
+  id            String     @id @default(cuid())
+  name          String
+  phone         String
+  email         String?
+  source        String?
+  estateId      String?
+  estate        Estate?    @relation(fields: [estateId], references: [id])
+  type          LeadType
+  status        LeadStatus @default(NEW)
+  assignedTo    String?
+  preferredDate DateTime?
+  timezone      String?
+  referrals     Referral[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+  @@index([estateId])
+}
+
+model Realtor {
+  id                 String        @id @default(cuid())
+  clerkUserId        String        @unique
+  name               String
+  email              String        @unique
+  phone              String
+  referralCode       String        @unique
+  commissionRatePercent Float       @default(2.5)
+  status             RealtorStatus @default(PENDING)
+  payoutBankName     String?
+  payoutAccountNumber String?
+  payoutAccountName  String?
+
+  referrals Referral[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Referral {
+  id                 String        @id @default(cuid())
+  realtorId          String
+  realtor            Realtor       @relation(fields: [realtorId], references: [id], onDelete: Cascade)
+  leadId             String?
+  lead               Lead?         @relation(fields: [leadId], references: [id])
+  estateId           String?
+  estate             Estate?       @relation(fields: [estateId], references: [id])
+  stage              ReferralStage @default(CLICKED)
+  commissionAmountNgn Int?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([realtorId])
+}
+
+model Payment {
+  id           String          @id @default(cuid())
+  reference    String          @unique
+  provider     PaymentProvider
+  leadId       String?
+  estateId     String?
+  estate       Estate?         @relation(fields: [estateId], references: [id])
+  plotId       String?
+  plot         Plot?           @relation(fields: [plotId], references: [id])
+  amountNgn    Int
+  status       PaymentStatus   @default(PENDING)
+  type         PaymentType
+  paidAt       DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+}

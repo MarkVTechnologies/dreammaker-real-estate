@@ -1,0 +1,14 @@
+{
+  "name": "dreammaker-rebrand",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DreamMaker Real Estate Ltd — brand & website redevelopment monorepo.",
+  "scripts": {
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "build:client": "npm --prefix client run build",
+    "build:server": "npm --prefix server run build",
+    "lint": "npm --prefix client run lint && npm --prefix server run lint",
+    "typecheck": "npm --prefix server run typecheck && npm --prefix client exec tsc -- --noEmit"
+  }
+}
