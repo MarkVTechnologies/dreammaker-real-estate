@@ -7,6 +7,9 @@ import { createLead } from "@/lib/api";
 
 interface InspectionFormProps {
   variant: "INSPECTION" | "VIRTUAL_INSPECTION";
+  /** When set (e.g. opened from an estate's detail page), the estate field is locked instead of freely editable. */
+  estateId?: string;
+  estateName?: string;
 }
 
 const fieldClass =
@@ -17,7 +20,7 @@ const iconClass = "pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translat
  * Max 4 fields — everything else post-submission (PRD §10.2). Virtual
  * inspection adds a timezone selector for the diaspora audience (PRD §5 P1).
  */
-export function InspectionForm({ variant }: InspectionFormProps) {
+export function InspectionForm({ variant, estateId, estateName }: InspectionFormProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
 
@@ -79,10 +82,18 @@ export function InspectionForm({ variant }: InspectionFormProps) {
         />
       </label>
 
-      <label className="relative block">
-        <MapPin className={iconClass} aria-hidden="true" />
-        <input name="estate" placeholder="Estate (optional)" className={fieldClass} />
-      </label>
+      {estateId ? (
+        <div className="flex items-center gap-2 rounded-md border border-navy-100 bg-navy-50 py-2.5 pl-3 pr-3 text-sm text-navy-900">
+          <MapPin className="h-4 w-4 shrink-0 text-ink-600" aria-hidden="true" />
+          {estateName ?? "Selected estate"}
+          <input type="hidden" name="estate" value={estateId} />
+        </div>
+      ) : (
+        <label className="relative block">
+          <MapPin className={iconClass} aria-hidden="true" />
+          <input name="estate" placeholder="Estate (optional)" className={fieldClass} />
+        </label>
+      )}
 
       <label className="relative block">
         <Calendar className={iconClass} aria-hidden="true" />

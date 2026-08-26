@@ -43,6 +43,7 @@ export interface Faq {
 }
 
 export interface EstateDetail {
+  id: string;
   slug: string;
   name: string;
   state: string;

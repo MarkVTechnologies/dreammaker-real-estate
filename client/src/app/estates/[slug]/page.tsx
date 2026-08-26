@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
-  CalendarCheck,
   CheckCircle2,
   FileText,
   MapPin,
@@ -11,6 +9,7 @@ import {
   ShieldCheck,
   Sprout,
 } from "lucide-react";
+import { EstateBookInspectionButton } from "@/components/estate/EstateBookInspectionButton";
 import { WhatsAppLink } from "@/components/layout/WhatsAppLink";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { getEstateBySlug } from "@/lib/api";
@@ -283,13 +282,11 @@ export default async function EstateDetailPage({ params }: Props) {
               <p className="mt-1 tabular-nums text-3xl font-bold text-navy-900">
                 {formatNgn(estate.startingPriceNgn)}
               </p>
-              <Link
-                href="/book-inspection"
+              <EstateBookInspectionButton
+                estateId={estate.id}
+                estateName={estate.name}
                 className="mt-6 flex w-full items-center justify-center gap-2 rounded-md bg-gold-500 px-6 py-3 font-semibold text-navy-950 transition-colors hover:bg-gold-600"
-              >
-                <CalendarCheck className="h-4 w-4" aria-hidden="true" />
-                Book inspection
-              </Link>
+              />
               <WhatsAppLink
                 message={whatsappMessage}
                 className="mt-3 flex w-full items-center justify-center gap-2 rounded-md border border-whatsapp px-6 py-3 font-semibold text-whatsapp transition-colors hover:bg-whatsapp/5"
