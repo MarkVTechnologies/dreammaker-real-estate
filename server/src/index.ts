@@ -1,9 +1,11 @@
 import "dotenv/config";
+import cookieParser from "cookie-parser";
 import cors from "cors";
 import express from "express";
 import { rateLimit } from "express-rate-limit";
 import helmet from "helmet";
 
+import { adminRouter } from "./routes/admin.js";
 import { bookingsRouter } from "./routes/bookings.js";
 import { estatesRouter } from "./routes/estates.js";
 import { leadsRouter } from "./routes/leads.js";
@@ -20,6 +22,7 @@ app.use(
     credentials: true,
   })
 );
+app.use(cookieParser());
 
 // Webhooks need the raw body for signature verification — mounted before json().
 app.use("/webhooks", express.raw({ type: "application/json" }), webhooksRouter);
@@ -32,6 +35,7 @@ app.use(["/leads", "/realtors/signup"], publicFormLimiter);
 
 app.get("/health", (_req, res) => res.json({ ok: true }));
 
+app.use("/admin", adminRouter);
 app.use("/estates", estatesRouter);
 app.use("/leads", leadsRouter);
 app.use("/realtors", realtorsRouter);
