@@ -30,6 +30,42 @@ export interface EstateSummary {
   plotsTotal: number;
 }
 
+export interface PaymentPlanOption {
+  name: string;
+  sizeSqm: number;
+  priceNgn: number;
+  treesCount?: number;
+}
+
+export interface Faq {
+  q: string;
+  a: string;
+}
+
+export interface EstateDetail {
+  slug: string;
+  name: string;
+  state: string;
+  lga: string;
+  locality: string;
+  status: "PLANNING" | "ONGOING" | "DELIVERED";
+  titleType: TitleType;
+  startingPriceNgn: number;
+  depositPercent: number;
+  plotSizesSqm: number[];
+  paymentPlans: PaymentPlanOption[] | null;
+  features: string[] | null;
+  documents: string[] | null;
+  gallery: string[] | null;
+  videoUrl: string | null;
+  landmarks: string[] | null;
+  faqs: Faq[] | null;
+  seoTitle: string | null;
+  seoDescription: string | null;
+  plotsAvailable: number;
+  plotsTotal: number;
+}
+
 export function formatNgn(amount: number): string {
   return new Intl.NumberFormat("en-NG", {
     style: "currency",

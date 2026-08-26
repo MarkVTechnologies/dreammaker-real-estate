@@ -5,6 +5,7 @@ import { rateLimit } from "express-rate-limit";
 import helmet from "helmet";
 
 import { bookingsRouter } from "./routes/bookings.js";
+import { estatesRouter } from "./routes/estates.js";
 import { leadsRouter } from "./routes/leads.js";
 import { paymentsRouter } from "./routes/payments.js";
 import { realtorsRouter } from "./routes/realtors.js";
@@ -31,6 +32,7 @@ app.use(["/leads", "/realtors/signup"], publicFormLimiter);
 
 app.get("/health", (_req, res) => res.json({ ok: true }));
 
+app.use("/estates", estatesRouter);
 app.use("/leads", leadsRouter);
 app.use("/realtors", realtorsRouter);
 app.use("/bookings", bookingsRouter);

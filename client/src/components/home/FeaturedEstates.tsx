@@ -3,11 +3,7 @@ import { ArrowRight, Banknote, Building2, MapPin } from "lucide-react";
 import { EstateCard } from "@/components/estate/EstateCard";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { TrustChips } from "./TrustChips";
-import type { EstateSummary } from "@/lib/types";
-
-// Sample shape only — wire to CMS/Prisma before this ships. Do not launch
-// with fabricated figures (PRD §10.2, §15 "Scarcity/availability data faked").
-const featuredEstates: EstateSummary[] = [];
+import { getEstates } from "@/lib/api";
 
 // PRD §3.1 names this exact chip set as the row to keep from
 // kemchutahomesltd.com's estate grid.
@@ -23,7 +19,9 @@ const estateTrustChips = [
  * kemchutahomesltd.com's "Fast Developing Estates" pacing: eyebrow + "View
  * all" link, then a trust chip row directly under the grid (PRD §3.1).
  */
-export function FeaturedEstates() {
+export async function FeaturedEstates() {
+  const featuredEstates = await getEstates();
+
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
       <Reveal className="flex flex-wrap items-end justify-between gap-4">
