@@ -67,6 +67,44 @@ export interface EstateDetail {
   plotsTotal: number;
 }
 
+export type PlotStatus = "AVAILABLE" | "RESERVED" | "SOLD";
+
+export interface PlotRecord {
+  id: string;
+  plotNumber: string;
+  sizeSqm: number;
+  priceNgn: number;
+  status: PlotStatus;
+  orientation: string | null;
+}
+
+/** Raw estate shape returned by the admin API (no computed availability fields). */
+export interface AdminEstate {
+  id: string;
+  slug: string;
+  name: string;
+  state: string;
+  lga: string;
+  locality: string;
+  status: "PLANNING" | "ONGOING" | "DELIVERED";
+  titleType: TitleType;
+  startingPriceNgn: number;
+  depositPercent: number;
+  plotSizesSqm: number[];
+  paymentPlans: PaymentPlanOption[] | null;
+  features: string[] | null;
+  documents: string[] | null;
+  gallery: string[] | null;
+  videoUrl: string | null;
+  landmarks: string[] | null;
+  faqs: Faq[] | null;
+  seoTitle: string | null;
+  seoDescription: string | null;
+  plots: PlotRecord[];
+}
+
+export type EstateFormInput = Omit<AdminEstate, "id" | "plots">;
+
 export function formatNgn(amount: number): string {
   return new Intl.NumberFormat("en-NG", {
     style: "currency",
