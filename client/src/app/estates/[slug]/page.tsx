@@ -10,8 +10,9 @@ import {
   Sprout,
 } from "lucide-react";
 import { EstateBookInspectionButton } from "@/components/estate/EstateBookInspectionButton";
+import { EstateGallery } from "@/components/estate/EstateGallery";
 import { WhatsAppLink } from "@/components/layout/WhatsAppLink";
-import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import { getEstateBySlug } from "@/lib/api";
 import { estateInterestMessage } from "@/lib/whatsapp";
 import { formatNgn, titleTypeLabel } from "@/lib/types";
@@ -161,15 +162,7 @@ export default async function EstateDetailPage({ params }: Props) {
             <Reveal delay={0.15}>
               <div className="mt-8">
                 <h2 className="font-display text-xl font-semibold text-navy-900">Gallery</h2>
-                <RevealGroup className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
-                  {restOfGallery.map((src) => (
-                    <RevealItem key={src}>
-                      <div className="relative aspect-square overflow-hidden rounded-lg bg-navy-100">
-                        <Image src={src} alt={estate.name} fill sizes="240px" className="object-cover" />
-                      </div>
-                    </RevealItem>
-                  ))}
-                </RevealGroup>
+                <EstateGallery images={restOfGallery} alt={estate.name} />
               </div>
             </Reveal>
           )}
