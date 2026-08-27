@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { categories, categorySlug, insightPosts } from "@/lib/insights";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://dreammaker.com.ng";
 
@@ -37,7 +38,12 @@ const staticRoutes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return staticRoutes.map((path) => ({
+  const insightRoutes = [
+    ...insightPosts.map((post) => `/insights/${post.slug}`),
+    ...categories.map((category) => `/insights/category/${categorySlug(category)}`),
+  ];
+
+  return [...staticRoutes, ...insightRoutes].map((path) => ({
     url: `${siteUrl}${path}`,
     lastModified: new Date(),
   }));
