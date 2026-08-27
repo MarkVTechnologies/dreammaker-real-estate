@@ -53,10 +53,26 @@ export function AboutHero() {
         <Reveal delay={0.2}>
           <div className="mx-auto mt-16 max-w-3xl rounded-2xl bg-white/95 p-8 shadow-2xl shadow-navy-950/30 backdrop-blur-sm">
             <dl className="grid grid-cols-2 gap-8 sm:grid-cols-4">
-              <Stat icon={Building2} label="Estates delivered" value={null} />
-              <Stat icon={Users} label="Families housed" value={null} />
-              <Stat icon={MapPin} label="Physical offices" value={2} />
-              <Stat icon={ShieldCheck} label="Years active" value={null} />
+              <Stat
+                icon={<Building2 className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />}
+                label="Estates delivered"
+                value={null}
+              />
+              <Stat
+                icon={<Users className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />}
+                label="Families housed"
+                value={null}
+              />
+              <Stat
+                icon={<MapPin className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />}
+                label="Physical offices"
+                value={2}
+              />
+              <Stat
+                icon={<ShieldCheck className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />}
+                label="Years active"
+                value={null}
+              />
             </dl>
           </div>
         </Reveal>

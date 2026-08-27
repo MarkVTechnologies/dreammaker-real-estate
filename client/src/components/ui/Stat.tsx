@@ -1,10 +1,13 @@
 "use client";
 
-import type { LucideIcon } from "lucide-react";
+import type { ReactNode } from "react";
 import { useCountUp } from "@/lib/useCountUp";
 
 interface StatProps {
-  icon: LucideIcon;
+  /** Pass a rendered icon element (e.g. `<Building2 className="h-5 w-5" />`), not the component
+   * reference — this component is a client boundary, and bare function references from a server
+   * parent aren't serializable across it. */
+  icon: ReactNode;
   label: string;
   /** Pass a real, auditable figure. Leave null until the client confirms it —
    * PRD §10.2/§15 forbid fabricated numbers, so an unconfirmed stat renders
@@ -14,13 +17,13 @@ interface StatProps {
 }
 
 /** Counts up once in view. Renders an honest pending chip when value is unconfirmed. */
-export function Stat({ icon: Icon, label, value, suffix = "" }: StatProps) {
+export function Stat({ icon, label, value, suffix = "" }: StatProps) {
   const ref = useCountUp<HTMLDListElement>(value, suffix);
 
   return (
     <div className="flex flex-col items-center gap-2 text-center">
       <span className="flex h-11 w-11 items-center justify-center rounded-full bg-navy-100 text-navy-700">
-        <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
+        {icon}
       </span>
       <dt className="text-sm text-ink-600">{label}</dt>
       {value !== null ? (
