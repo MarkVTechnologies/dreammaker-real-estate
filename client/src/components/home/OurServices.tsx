@@ -1,44 +1,7 @@
 import Link from "next/link";
-import { ArrowRight, Building2, ClipboardList, FileCheck, HardHat, KeyRound } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-
-const services = [
-  {
-    n: "01",
-    label: "Property development",
-    href: "/services/property-development",
-    icon: Building2,
-    copy: "Land acquisition, planning and estate development across the Lekki–Epe corridor.",
-  },
-  {
-    n: "02",
-    label: "Construction management",
-    href: "/services/construction-management",
-    icon: HardHat,
-    copy: "Oversight of build quality, timelines and budget on every DreamMaker site.",
-  },
-  {
-    n: "03",
-    label: "Project management",
-    href: "/services/project-management",
-    icon: ClipboardList,
-    copy: "Coordinated delivery from groundbreaking to allocation, phase by phase.",
-  },
-  {
-    n: "04",
-    label: "Property management",
-    href: "/services/property-management",
-    icon: KeyRound,
-    copy: "Ongoing upkeep and administration for delivered estates and occupied plots.",
-  },
-  {
-    n: "05",
-    label: "Title perfection",
-    href: "/services/title-perfection",
-    icon: FileCheck,
-    copy: "Documentation and regularization of C of O, Excision, Gazette and Governor's Consent titles.",
-  },
-];
+import { services } from "@/lib/services";
 
 /**
  * New section, styled after kemchutahomesltd.com's numbered "Our Services"
