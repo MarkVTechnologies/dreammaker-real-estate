@@ -2,16 +2,20 @@ import type { EstateDetail, EstateSummary } from "./types";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4200";
 
-/** Estate grid data (server/src/routes/estates.ts) — revalidates hourly. */
+/**
+ * Estate grid data (server/src/routes/estates.ts). Never cached: estates are edited live via
+ * /admin, and Vercel's fetch cache isn't reliably invalidated by a redeploy, so a time-based
+ * revalidate window left edits appearing stale for up to an hour.
+ */
 export async function getEstates(): Promise<EstateSummary[]> {
-  const res = await fetch(`${API_URL}/estates`, { next: { revalidate: 3600 } });
+  const res = await fetch(`${API_URL}/estates`, { cache: "no-store" });
   if (!res.ok) return [];
   return res.json();
 }
 
-/** Single estate for the detail page — revalidates hourly. */
+/** Single estate for the detail page — never cached, see getEstates(). */
 export async function getEstateBySlug(slug: string): Promise<EstateDetail | null> {
-  const res = await fetch(`${API_URL}/estates/${slug}`, { next: { revalidate: 3600 } });
+  const res = await fetch(`${API_URL}/estates/${slug}`, { cache: "no-store" });
   if (!res.ok) return null;
   return res.json();
 }
