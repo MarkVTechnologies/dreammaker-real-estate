@@ -21,7 +21,7 @@ export function EstateCard({ estate }: { estate: EstateSummary }) {
       className="group h-full"
     >
       <Link
-        href={`/estates/${estate.slug}`}
+        href={`/projects/${estate.slug}`}
         className="block h-full overflow-hidden rounded-xl border border-navy-100 bg-white transition-shadow duration-300 hover:shadow-xl hover:shadow-navy-950/10"
       >
         <div className="relative aspect-[4/3] w-full overflow-hidden bg-navy-100">

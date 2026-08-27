@@ -66,7 +66,7 @@ export function WhyChooseUs() {
 
             <Reveal delay={0.1}>
               <Link
-                href="/estates"
+                href="/projects"
                 className="mt-8 inline-flex items-center gap-1.5 font-semibold text-gold-500 hover:text-gold-600"
               >
                 Explore our estates

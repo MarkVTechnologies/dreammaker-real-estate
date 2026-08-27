@@ -34,7 +34,7 @@ export async function FeaturedEstates() {
           </h2>
         </div>
         <Link
-          href="/estates"
+          href="/projects"
           className="inline-flex items-center gap-1 font-medium text-navy-700 hover:text-navy-900"
         >
           View all estates
@@ -42,10 +42,10 @@ export async function FeaturedEstates() {
         </Link>
       </Reveal>
 
-      {/* TODO: location / budget / plot size / title type filter form routing to /estates?query */}
+      {/* TODO: location / budget / plot size / title type filter form routing to /projects?query */}
       <Reveal delay={0.05}>
         <form
-          action="/estates"
+          action="/projects"
           className="mt-8 flex flex-wrap gap-3 rounded-xl border border-navy-100 bg-navy-50 p-3"
         >
           <label className="relative flex-1 basis-52">

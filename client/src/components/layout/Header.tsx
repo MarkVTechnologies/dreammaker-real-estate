@@ -4,7 +4,7 @@ import { primaryNav } from "@/lib/nav";
 import { MobileNav } from "./MobileNav";
 import { WhatsAppLink } from "./WhatsAppLink";
 
-/** Desktop nav per PRD §7: Estates · Invest · Services · Projects · About · Insights → [Book Inspection] + WhatsApp. */
+/** Desktop nav per PRD §7: Invest · Services · Projects · About · Insights → [Book Inspection] + WhatsApp. */
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-navy-100 bg-white/90 backdrop-blur-md">

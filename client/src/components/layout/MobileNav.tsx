@@ -9,7 +9,7 @@ import { primaryNav } from "@/lib/nav";
 import { WhatsAppLink } from "./WhatsAppLink";
 
 /**
- * Mobile-only nav drawer. Without this, the primary IA (Estates · Invest ·
+ * Mobile-only nav drawer. Without this, the primary IA (Invest ·
  * Services · Projects · About · Insights, PRD §7) was unreachable on mobile —
  * MobileStickyBar only surfaces Call/WhatsApp/Book Inspection.
  *

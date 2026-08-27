@@ -6,7 +6,6 @@
  */
 
 export const primaryNav = [
-  { label: "Estates", href: "/estates" },
   { label: "Invest", href: "/invest" },
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
@@ -16,9 +15,9 @@ export const primaryNav = [
 
 export const footerSitemap = [
   {
-    heading: "Estates",
+    heading: "Projects",
     links: [
-      { label: "All estates", href: "/estates" },
+      { label: "All projects", href: "/projects" },
       { label: "Land for sale in Ibeju-Lekki", href: "/land-for-sale/lagos/ibeju-lekki" },
       { label: "Land for sale in Awoyaya", href: "/land-for-sale/lagos/awoyaya" },
       { label: "Land for sale in Lakowe", href: "/land-for-sale/lagos/lakowe" },

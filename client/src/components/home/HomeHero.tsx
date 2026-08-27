@@ -92,7 +92,7 @@ export function HomeHero() {
           className="mt-9 flex flex-wrap gap-4"
         >
           <Link
-            href="/estates"
+            href="/projects"
             className="group inline-flex items-center gap-2 rounded-full bg-gold-500 px-6 py-3 font-semibold text-navy-950 transition-colors hover:bg-gold-600"
           >
             Explore Estates
