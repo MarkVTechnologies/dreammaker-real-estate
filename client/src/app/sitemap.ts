@@ -24,7 +24,6 @@ const staticRoutes = [
   "/about",
   "/about/leadership",
   "/about/offices/lakowe",
-  "/about/offices/awoyaya",
   "/media",
   "/realtors",
   "/guides",

@@ -50,7 +50,6 @@ export const footerSitemap = [
       { label: "About", href: "/about" },
       { label: "Leadership", href: "/about/leadership" },
       { label: "Lakowe office", href: "/about/offices/lakowe" },
-      { label: "Awoyaya office", href: "/about/offices/awoyaya" },
       { label: "Media & press", href: "/media" },
       { label: "Realtors", href: "/realtors" },
     ],
@@ -83,11 +82,6 @@ export const nap = {
       slug: "lakowe",
       name: "Lakowe Office",
       address: "TODO: confirm exact address for Lakowe office (PRD §2.2)",
-    },
-    {
-      slug: "awoyaya",
-      name: "Awoyaya / Ajah Office",
-      address: "TODO: confirm exact address for Awoyaya/Ajah office (PRD §2.2)",
     },
   ],
 } as const;

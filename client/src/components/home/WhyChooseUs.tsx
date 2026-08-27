@@ -16,7 +16,7 @@ const pillars = [
   {
     pillar: "Accountable",
     icon: BadgeCheck,
-    copy: "Named leadership, two physical offices, and a press record — all linked, not just asserted.",
+    copy: "Named leadership, a physical office, and a press record — all linked, not just asserted.",
   },
 ];
 

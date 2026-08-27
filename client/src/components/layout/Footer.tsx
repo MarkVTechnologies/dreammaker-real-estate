@@ -40,7 +40,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 grid gap-6 border-t border-navy-800 pt-8 sm:grid-cols-2">
+        <div className="mt-12 grid max-w-sm gap-6 border-t border-navy-800 pt-8">
           {nap.offices.map((office) => (
             <div key={office.slug} className="flex gap-3 text-sm text-navy-100">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-500" aria-hidden="true" />

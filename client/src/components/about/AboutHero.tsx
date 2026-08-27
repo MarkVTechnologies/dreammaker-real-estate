@@ -29,7 +29,7 @@ export function AboutHero() {
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-navy-100">
             DreamMaker Real Estate Ltd develops and delivers verified land and homes across
-            Lagos and Ogun&apos;s fastest-growing corridors — with real offices, named
+            Lagos and Ogun&apos;s fastest-growing corridors — with a real office, named
             leadership, and titles you can bank on.
           </p>
         </Reveal>
@@ -65,8 +65,8 @@ export function AboutHero() {
               />
               <Stat
                 icon={<MapPin className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />}
-                label="Physical offices"
-                value={2}
+                label="Physical office"
+                value={1}
               />
               <Stat
                 icon={<ShieldCheck className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />}

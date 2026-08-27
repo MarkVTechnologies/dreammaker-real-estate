@@ -12,7 +12,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export const metadata = {
   title: "About DreamMaker Real Estate Ltd",
   description:
-    "DreamMaker Real Estate Ltd — a Lagos developer on the Lekki–Epe corridor with two physical offices, real construction delivery and named leadership.",
+    "DreamMaker Real Estate Ltd — a Lagos developer on the Lekki–Epe corridor with a physical office, real construction delivery and named leadership.",
 };
 
 export default function AboutPage() {

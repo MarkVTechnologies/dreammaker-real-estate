@@ -4,7 +4,7 @@ const items = [
   { icon: FileCheck, label: "RC: TODO" },
   { icon: BadgeCheck, label: "CAC Registered" },
   { icon: ShieldCheck, label: "Verified Titles" },
-  { icon: MapPin, label: "Physical Offices — Lakowe & Awoyaya" },
+  { icon: MapPin, label: "Physical Office — Lakowe" },
   { icon: Clock, label: "Years Active: TODO" },
 ];
 

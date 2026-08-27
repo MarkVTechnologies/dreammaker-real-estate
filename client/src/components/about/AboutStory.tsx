@@ -20,7 +20,7 @@ export function AboutStory() {
             </p>
             <p>
               What started as a small team walking prospective buyers through bush plots on the
-              Lekki–Epe corridor has grown into a company with permanent offices, an active
+              Lekki–Epe corridor has grown into a company with a permanent office, an active
               realtor network, and a pipeline of estates in active development across Lagos and
               Ogun State — without ever losing the plot-by-plot accountability we started with.
             </p>
