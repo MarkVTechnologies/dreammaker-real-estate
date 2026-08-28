@@ -69,7 +69,7 @@ export function WhatsAppWidget() {
                 </div>
                 <div>
                   <p className="font-display font-semibold text-white">DreamMaker Support</p>
-                  <p className="text-sm text-navy-200">Real Estate Sales Team</p>
+                  <p className="text-sm text-navy-100">Real Estate Sales Team</p>
                   <p className="mt-0.5 flex items-center gap-1.5 text-xs font-medium text-gold-500">
                     <span className="h-1.5 w-1.5 rounded-full bg-gold-500" aria-hidden="true" />
                     Typically replies within 2 hours
