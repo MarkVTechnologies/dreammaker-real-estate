@@ -6,7 +6,7 @@
  */
 
 export const primaryNav = [
-  { label: "Invest", href: "/invest" },
+  { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
   { label: "About", href: "/about" },

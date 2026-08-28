@@ -13,3 +13,7 @@ export function estateInterestMessage(estateName: string, plotSize?: string): st
     ? `Hi DreamMaker, I'm interested in ${estateName} — ${plotSize}`
     : `Hi DreamMaker, I'm interested in ${estateName}`;
 }
+
+export function estateSubscribeMessage(estateName: string): string {
+  return `Hi DreamMaker, please subscribe me for updates on ${estateName}.`;
+}

@@ -1,7 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import { WhatsAppLink } from "@/components/layout/WhatsAppLink";
+import { getEstates } from "@/lib/api";
 import { FeaturedEstates } from "./FeaturedEstates";
-import { HomeHero } from "./HomeHero";
+import { HomeHeroCarousel } from "./HomeHeroCarousel";
 import { InsightsTeaser } from "./InsightsTeaser";
 import { InvestSection } from "./InvestSection";
 import { LeadMagnet } from "./LeadMagnet";
@@ -19,10 +20,12 @@ import { WhyChooseUs } from "./WhyChooseUs";
  * Every PRD §8.1 homepage module is still present; several are combined or
  * reordered for tighter narrative flow rather than dropped.
  */
-export function HomeView() {
+export async function HomeView() {
+  const estates = await getEstates();
+
   return (
     <>
-      <HomeHero />
+      <HomeHeroCarousel estates={estates} />
       <TrustStrip />
       <OurStory />
       <OurServices />

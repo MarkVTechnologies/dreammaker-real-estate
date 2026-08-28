@@ -9,7 +9,6 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://dreammaker.com.ng";
 // auto-regenerates on publish; start as one sitemap and split when it grows.
 const staticRoutes = [
   "/",
-  "/invest",
   "/invest/land-banking",
   "/invest/off-plan",
   "/invest/buy-back",

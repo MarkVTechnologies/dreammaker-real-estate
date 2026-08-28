@@ -4,6 +4,7 @@ import { Fraunces, Inter } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { MobileStickyBar } from "@/components/layout/MobileStickyBar";
+import { WhatsAppWidget } from "@/components/layout/WhatsAppWidget";
 import "./globals.css";
 
 // Self-hosted via next/font, Latin subset only, only the weights actually
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <main className="flex-1 pb-16 md:pb-0">{children}</main>
           <Footer />
           <MobileStickyBar />
+          <WhatsAppWidget />
         </body>
       </html>
     </ClerkProvider>
