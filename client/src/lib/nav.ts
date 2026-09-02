@@ -75,12 +75,15 @@ export const footerSitemap = [
 /** NAP — keep identical to Google Business Profile everywhere (PRD §9.4). */
 export const nap = {
   legalName: "DreamMaker Real Estate Ltd",
-  phoneDisplay: "+234 000 000 0000", // TODO: confirm live line before launch
+  phoneDisplay: "+234 816 786 6044",
+  phoneDisplaySecondary: "+234 915 822 1658",
+  email: "contact@dreammaker.com.ng",
   offices: [
     {
       slug: "lakowe",
       name: "Lakowe Office",
-      address: "TODO: confirm exact address for Lakowe office (PRD §2.2)",
+      address:
+        "DreamMaker Building, School Gate Bus Stop, Lakowe, beside NNPC Filling Station, Km 42, Lekki/Epe Expressway, Lagos State.",
     },
   ],
 } as const;

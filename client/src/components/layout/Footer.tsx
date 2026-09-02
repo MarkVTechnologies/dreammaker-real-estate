@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { footerSitemap, nap } from "@/lib/nav";
 
 /**
@@ -62,10 +62,20 @@ export function Footer() {
           <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
             <span>{nap.legalName}</span>
             <span aria-hidden="true">·</span>
-            <span className="inline-flex items-center gap-1.5">
+            <a href={`tel:${nap.phoneDisplay.replace(/\s+/g, "")}`} className="inline-flex items-center gap-1.5 hover:text-white">
               <Phone className="h-3.5 w-3.5" aria-hidden="true" />
               {nap.phoneDisplay}
-            </span>
+            </a>
+            <span aria-hidden="true">·</span>
+            <a href={`tel:${nap.phoneDisplaySecondary.replace(/\s+/g, "")}`} className="inline-flex items-center gap-1.5 hover:text-white">
+              <Phone className="h-3.5 w-3.5" aria-hidden="true" />
+              {nap.phoneDisplaySecondary}
+            </a>
+            <span aria-hidden="true">·</span>
+            <a href={`mailto:${nap.email}`} className="inline-flex items-center gap-1.5 hover:text-white">
+              <Mail className="h-3.5 w-3.5" aria-hidden="true" />
+              {nap.email}
+            </a>
             <span aria-hidden="true">·</span>
             <span>RC: TODO (confirm before launch, PRD §16)</span>
           </p>
