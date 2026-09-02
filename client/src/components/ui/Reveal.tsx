@@ -14,12 +14,14 @@ interface RevealProps {
   children: ReactNode;
   className?: string;
   delay?: number;
+  id?: string;
 }
 
 /** Scroll-triggered fade/rise for a single block. Animates once, never re-fires on scroll-back. */
-export function Reveal({ children, className, delay = 0 }: RevealProps) {
+export function Reveal({ children, className, delay = 0, id }: RevealProps) {
   return (
     <motion.div
+      id={id}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-80px" }}

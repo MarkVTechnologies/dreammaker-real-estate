@@ -1,13 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { MediaPlaceholder } from "@/components/ui/MediaPlaceholder";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-
-const leaders = [
-  { name: "Name pending", role: "Managing Director" },
-  { name: "Name pending", role: "Head of Sales & Partnerships" },
-  { name: "Name pending", role: "Head of Construction" },
-];
+import { executiveTeam } from "@/lib/team";
 
 export function AboutLeadership() {
   return (
@@ -31,15 +26,26 @@ export function AboutLeadership() {
       </Reveal>
 
       <RevealGroup className="mt-10 grid gap-6 sm:grid-cols-3">
-        {leaders.map((leader, i) => (
-          <RevealItem key={leader.role}>
-            <div className="overflow-hidden rounded-2xl border border-navy-100 bg-white">
-              <MediaPlaceholder label="Portrait pending" className="aspect-square w-full" delay={i * 0.15} />
+        {executiveTeam.map((leader) => (
+          <RevealItem key={leader.slug}>
+            <Link
+              href={`/about/leadership#${leader.slug}`}
+              className="group block overflow-hidden rounded-2xl border border-navy-100 bg-white transition-shadow duration-300 hover:shadow-lg hover:shadow-navy-950/5"
+            >
+              <div className="relative aspect-square w-full overflow-hidden bg-navy-100">
+                <Image
+                  src={leader.photo}
+                  alt={leader.name}
+                  fill
+                  sizes="(min-width: 640px) 33vw, 100vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
               <div className="p-5">
                 <p className="font-display text-lg font-semibold text-navy-900">{leader.name}</p>
                 <p className="mt-0.5 text-sm text-ink-600">{leader.role}</p>
               </div>
-            </div>
+            </Link>
           </RevealItem>
         ))}
       </RevealGroup>
