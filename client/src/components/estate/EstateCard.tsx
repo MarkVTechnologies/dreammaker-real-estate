@@ -12,7 +12,8 @@ import { EstateSummary, formatNgn, titleTypeLabel } from "@/lib/types";
  * fabricated scarcity (PRD §10.2).
  */
 export function EstateCard({ estate }: { estate: EstateSummary }) {
-  const scarce = estate.plotsTotal > 0 && estate.plotsAvailable / estate.plotsTotal <= 0.2;
+  const soldOut = estate.plotsTotal > 0 && estate.plotsAvailable === 0;
+  const scarce = !soldOut && estate.plotsTotal > 0 && estate.plotsAvailable / estate.plotsTotal <= 0.2;
 
   return (
     <motion.div
@@ -31,7 +32,7 @@ export function EstateCard({ estate }: { estate: EstateSummary }) {
               alt={`${estate.name}, ${estate.locality}`}
               fill
               sizes="(min-width: 1024px) 320px, 100vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className={`object-cover transition-transform duration-500 group-hover:scale-105 ${soldOut ? "grayscale" : ""}`}
             />
           ) : (
             <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-navy-100 via-navy-50 to-navy-100 text-navy-400">
@@ -43,6 +44,11 @@ export function EstateCard({ estate }: { estate: EstateSummary }) {
             <ShieldCheck className="h-3.5 w-3.5 text-gold-500" aria-hidden="true" />
             {titleTypeLabel[estate.titleType]}
           </span>
+          {soldOut && (
+            <span className="absolute right-3 top-3 rounded-full bg-ink-900 px-3 py-1 text-xs font-semibold text-white">
+              Sold Out
+            </span>
+          )}
           {scarce && (
             <span className="absolute right-3 top-3 rounded-full bg-warning px-3 py-1 text-xs font-semibold text-white">
               Limited availability

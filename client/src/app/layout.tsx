@@ -4,6 +4,7 @@ import { Fraunces, Inter } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { MobileStickyBar } from "@/components/layout/MobileStickyBar";
+import { PartnersSection } from "@/components/layout/PartnersSection";
 import { WhatsAppWidget } from "@/components/layout/WhatsAppWidget";
 import "./globals.css";
 
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <body className="flex min-h-full flex-col bg-paper text-ink-900">
           <Header />
           <main className="flex-1 pb-16 md:pb-0">{children}</main>
+          <PartnersSection />
           <Footer />
           <MobileStickyBar />
           <WhatsAppWidget />

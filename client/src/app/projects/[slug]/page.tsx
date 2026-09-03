@@ -55,6 +55,7 @@ export default async function ProjectDetailPage({ params }: Props) {
   const restOfGallery = gallery.slice(1);
   const embedUrl = estate.videoUrl ? youtubeEmbedUrl(estate.videoUrl) : null;
   const whatsappMessage = estateInterestMessage(estate.name);
+  const soldOut = estate.plotsTotal > 0 && estate.plotsAvailable === 0;
 
   return (
     <div className="relative overflow-hidden">
@@ -71,6 +72,11 @@ export default async function ProjectDetailPage({ params }: Props) {
             <span className="inline-flex items-center rounded-full bg-navy-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-navy-700">
               {statusLabel[estate.status]}
             </span>
+            {soldOut && (
+              <span className="inline-flex items-center rounded-full bg-ink-900 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+                Sold Out
+              </span>
+            )}
           </div>
           <h1 className="mt-4 font-display text-4xl font-bold text-navy-900 sm:text-5xl">
             {estate.name}
