@@ -32,7 +32,7 @@ export function EstateCard({ estate }: { estate: EstateSummary }) {
               alt={`${estate.name}, ${estate.locality}`}
               fill
               sizes="(min-width: 1024px) 320px, 100vw"
-              className={`object-cover transition-transform duration-500 group-hover:scale-105 ${soldOut ? "grayscale" : ""}`}
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
           ) : (
             <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-navy-100 via-navy-50 to-navy-100 text-navy-400">
