@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BadgeCheck, Building2, Camera, ShieldCheck } from "lucide-react";
+import { ArrowRight, BadgeCheck, Building2, ShieldCheck } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 
 const pillars = [
@@ -38,9 +39,14 @@ export function WhyChooseUs() {
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,22rem)_1fr] lg:items-center">
           <Reveal delay={0.05} className="relative mx-auto w-full max-w-xs">
-            <div className="flex aspect-[4/5] w-full flex-col items-center justify-center gap-3 rounded-2xl border border-white/10 bg-navy-800">
-              <Camera className="h-8 w-8 text-navy-400" aria-hidden="true" strokeWidth={1.5} />
-              <span className="text-xs font-medium text-navy-300">Leadership photo pending</span>
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-navy-800">
+              <Image
+                src="/images/team/ejieh-mercy-ogho.jpg"
+                alt="Ejieh Mercy Ogho, General Manager"
+                fill
+                sizes="(min-width: 1024px) 22rem, 20rem"
+                className="object-cover"
+              />
             </div>
             <div className="absolute -right-3 -top-3 rounded-full bg-gold-500 px-4 py-1.5 text-xs font-bold text-navy-950 shadow-lg">
               Est. TODO

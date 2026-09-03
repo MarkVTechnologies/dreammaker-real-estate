@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Building2, MessageCircle, Phone, X } from "lucide-react";
+import Image from "next/image";
+import { MessageCircle, Phone, X } from "lucide-react";
 import { nap } from "@/lib/nav";
 import { whatsappLink } from "@/lib/whatsapp";
 
@@ -62,8 +63,14 @@ export function WhatsAppWidget() {
               </button>
               <div className="flex items-center gap-3">
                 <div className="relative shrink-0">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-gold-500/40 bg-navy-800">
-                    <Building2 className="h-6 w-6 text-gold-500" aria-hidden="true" strokeWidth={1.75} />
+                  <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-gold-500/40 bg-navy-800">
+                    <Image
+                      src="/images/team/mary-william.jpg"
+                      alt="Mary William, Chief Operating Officer"
+                      fill
+                      sizes="56px"
+                      className="object-cover"
+                    />
                   </div>
                   <span className="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-navy-950 bg-success" aria-hidden="true" />
                 </div>
@@ -83,8 +90,14 @@ export function WhatsAppWidget() {
               <p className="text-center text-xs font-medium uppercase tracking-wide text-ink-500">Today</p>
 
               <div className="mt-3 flex items-end gap-2">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-navy-100 bg-white">
-                  <Building2 className="h-4 w-4 text-navy-700" aria-hidden="true" strokeWidth={1.75} />
+                <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-navy-100 bg-white">
+                  <Image
+                    src="/images/team/mary-william.jpg"
+                    alt="Mary William, Chief Operating Officer"
+                    fill
+                    sizes="32px"
+                    className="object-cover"
+                  />
                 </div>
                 <div className="rounded-2xl rounded-bl-sm bg-white p-3.5 shadow-sm">
                   <p className="text-sm leading-relaxed text-ink-700">
