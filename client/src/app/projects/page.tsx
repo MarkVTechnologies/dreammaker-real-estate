@@ -1,7 +1,10 @@
 import { Building2 } from "lucide-react";
 import { EstateCard } from "@/components/estate/EstateCard";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { getEstates } from "@/lib/api";
+import { listEstateSummaries } from "@/lib/db/estates";
+
+// Never cached: estates are edited live via /admin.
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Our Projects — Estates for Sale in Lagos & Ogun",
@@ -10,7 +13,7 @@ export const metadata = {
 };
 
 export default async function ProjectsIndexPage() {
-  const estates = await getEstates();
+  const estates = await listEstateSummaries();
 
   return (
     <div className="relative overflow-hidden">

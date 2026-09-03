@@ -1,5 +1,8 @@
 import { HomeView } from "@/components/home/HomeView";
 
+// Estates render here via a live MongoDB read (edited any time via /admin) — never prerendered/cached.
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: "Real Estate Company in Lagos | Land & Homes, Lekki–Epe Corridor",
   description:

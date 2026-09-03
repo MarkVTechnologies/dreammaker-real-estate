@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { WhatsAppLink } from "@/components/layout/WhatsAppLink";
-import { getEstates } from "@/lib/api";
+import { listEstateSummaries } from "@/lib/db/estates";
 import { FeaturedEstates } from "./FeaturedEstates";
 import { HomeHeroCarousel } from "./HomeHeroCarousel";
 import { InsightsTeaser } from "./InsightsTeaser";
@@ -21,7 +21,7 @@ import { WhyChooseUs } from "./WhyChooseUs";
  * reordered for tighter narrative flow rather than dropped.
  */
 export async function HomeView() {
-  const estates = await getEstates();
+  const estates = await listEstateSummaries();
 
   return (
     <>

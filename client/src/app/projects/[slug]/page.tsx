@@ -13,9 +13,12 @@ import { EstateBookInspectionButton } from "@/components/estate/EstateBookInspec
 import { EstateGallery } from "@/components/estate/EstateGallery";
 import { WhatsAppLink } from "@/components/layout/WhatsAppLink";
 import { Reveal } from "@/components/ui/Reveal";
-import { getEstateBySlug } from "@/lib/api";
+import { getEstateDetailBySlug } from "@/lib/db/estates";
 import { estateInterestMessage } from "@/lib/whatsapp";
 import { formatNgn, titleTypeLabel } from "@/lib/types";
+
+// Never cached: estates are edited live via /admin.
+export const dynamic = "force-dynamic";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -34,7 +37,7 @@ function youtubeEmbedUrl(url: string): string | null {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const estate = await getEstateBySlug(slug);
+  const estate = await getEstateDetailBySlug(slug);
   if (!estate) return { title: "Project not found" };
 
   return {
@@ -47,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProjectDetailPage({ params }: Props) {
   const { slug } = await params;
-  const estate = await getEstateBySlug(slug);
+  const estate = await getEstateDetailBySlug(slug);
   if (!estate) notFound();
 
   const gallery = estate.gallery ?? [];
