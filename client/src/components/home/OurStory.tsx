@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Play, Users } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 /**
@@ -40,18 +41,29 @@ export function OurStory() {
           delay={0.15}
           className="mx-auto mt-12 flex max-w-3xl flex-col gap-6 rounded-2xl border border-white/10 bg-white/5 p-7 sm:flex-row sm:items-center"
         >
-          <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-navy-800 text-gold-500">
-            <Users className="h-7 w-7" aria-hidden="true" strokeWidth={1.5} />
+          <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 border-gold-500/40">
+            <Image
+              src="/images/team/ejieh-paradise-godstime.jpg"
+              alt="Ejieh Paradise Godstime, Managing Director"
+              fill
+              sizes="64px"
+              className="object-cover"
+            />
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-wide text-gold-500">
               From the Managing Director
             </p>
             <p className="mt-2 font-display text-lg text-white">
-              {/* TODO: MD Ejieh Paradise one-paragraph statement + Guardian feature link (PRD §3.2, §9.2 Person schema) */}
-              &ldquo;One-paragraph statement pending — link to the Guardian feature once copy is
-              approved.&rdquo;
+              &ldquo;We started DreamMaker because too many people paid for land in Lagos and Ogun
+              they could never build on — no title, no allocation, and no one to call when it went
+              wrong. Every estate we sell now starts with a documented title, not a promise, and
+              it&apos;s backed by a team you can walk into our Lakowe office and meet. That
+              standard isn&apos;t for marketing — it&apos;s the one I&apos;d want if I were the one
+              buying.&rdquo;
             </p>
+            <p className="mt-3 text-sm font-semibold text-white">Ejieh Paradise Godstime</p>
+            <p className="text-sm text-navy-200">CEO &amp; Managing Director</p>
             <Link
               href="/about/leadership"
               className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-navy-100 hover:text-white"
