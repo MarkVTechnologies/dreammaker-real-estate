@@ -1,16 +1,13 @@
-import { PageStub } from "@/components/ui/PageStub";
+import { ServiceDetailPage } from "@/components/services/ServiceDetailPage";
+import { services } from "@/lib/services";
 
 export const metadata = {
   title: "Real Estate Project Management — Lagos",
-  description: "Project management services for real estate development in Lagos.",
+  description:
+    "Coordinated project management for real estate development in Lagos — one point of accountability from groundbreaking to allocation.",
 };
 
 export default function ProjectManagementPage() {
-  return (
-    <PageStub
-      title="Project management"
-      intro="Secondary keyword target alongside construction management (PRD §9.3)."
-      prdRef="PRD §9.3"
-    />
-  );
+  const service = services.find((s) => s.slug === "project-management")!;
+  return <ServiceDetailPage service={service} />;
 }

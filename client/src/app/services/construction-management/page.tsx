@@ -1,16 +1,13 @@
-import { PageStub } from "@/components/ui/PageStub";
+import { ServiceDetailPage } from "@/components/services/ServiceDetailPage";
+import { services } from "@/lib/services";
 
 export const metadata = {
   title: "Construction Management Company Lagos",
-  description: "DreamMaker's construction management services across the Lekki–Epe corridor.",
+  description:
+    "DreamMaker's construction management services across the Lekki–Epe corridor — in-house contractor supervision, quality control and schedule tracking.",
 };
 
 export default function ConstructionManagementPage() {
-  return (
-    <PageStub
-      title="Construction management"
-      intro="Primary keyword target per PRD §9.3 keyword map."
-      prdRef="PRD §9.3"
-    />
-  );
+  const service = services.find((s) => s.slug === "construction-management")!;
+  return <ServiceDetailPage service={service} />;
 }

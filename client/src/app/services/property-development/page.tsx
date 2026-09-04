@@ -1,16 +1,13 @@
-import { PageStub } from "@/components/ui/PageStub";
+import { ServiceDetailPage } from "@/components/services/ServiceDetailPage";
+import { services } from "@/lib/services";
 
 export const metadata = {
   title: "Property Development Company in Lagos",
-  description: "DreamMaker's property development capability on the Lekki–Epe corridor.",
+  description:
+    "DreamMaker's property development capability on the Lekki–Epe corridor — land acquisition, layout planning, government approvals and phased release.",
 };
 
 export default function PropertyDevelopmentPage() {
-  return (
-    <PageStub
-      title="Property development"
-      intro="Rewrite from the generic 'entitlement processing services' copy flagged in PRD §2.1 — lead with figures and dates (Appendix A)."
-      prdRef="PRD §7, Appendix A"
-    />
-  );
+  const service = services.find((s) => s.slug === "property-development")!;
+  return <ServiceDetailPage service={service} />;
 }

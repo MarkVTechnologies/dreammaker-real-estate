@@ -1,16 +1,13 @@
-import { PageStub } from "@/components/ui/PageStub";
+import { ServiceDetailPage } from "@/components/services/ServiceDetailPage";
+import { services } from "@/lib/services";
 
 export const metadata = {
   title: "Property Management Services — Lagos",
-  description: "DreamMaker's property management services for delivered estates and homes.",
+  description:
+    "DreamMaker's property management services for delivered estates and homes — infrastructure upkeep, security, and owner support.",
 };
 
 export default function PropertyManagementPage() {
-  return (
-    <PageStub
-      title="Property management"
-      intro="Real construction and property-management delivery is part of the entity's real-world foundation (PRD §1)."
-      prdRef="PRD §1, §7"
-    />
-  );
+  const service = services.find((s) => s.slug === "property-management")!;
+  return <ServiceDetailPage service={service} />;
 }
