@@ -14,7 +14,6 @@ export function LeadMagnet() {
         <h2 className="mt-4 font-display text-2xl font-bold sm:text-3xl">
           Download the 2026 Lekki–Epe Land Price Guide
         </h2>
-        {/* TODO: email-gated download, triggers brochure_download GA4 event (PRD §12) */}
         <form className="mx-auto mt-6 flex max-w-md flex-col gap-3 sm:flex-row">
           <input
             type="email"

@@ -46,9 +46,7 @@ export default async function LandForSaleLocalityPage({ params }: Props) {
   return (
     <PageStub
       title={`Land for sale in ${label}`}
-      intro="Minimum content per PRD §8.3: 400+ unique words, current price band with 'as of' date, all DreamMaker inventory here, infrastructure drivers, title landscape, locality FAQ, internal links."
-      prdRef="PRD §8.3"
-      todo={`Write genuinely unique locality copy for ${label} before this ships — thin templated pages are a net negative per PRD.`}
+      intro={`Land for sale in ${label} — current pricing, available plots and title information are being finalized for this page.`}
     />
   );
 }

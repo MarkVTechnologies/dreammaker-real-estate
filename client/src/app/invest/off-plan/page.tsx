@@ -10,9 +10,7 @@ export default function OffPlanPage() {
   return (
     <PageStub
       title="Off-plan"
-      intro="Clean mental model adopted from houseofjulieta.org's segmentation (PRD §3.2)."
-      prdRef="PRD §8.5 guide 6"
-      todo="Cross-link to the off-plan pillar guide once published."
+      intro="Invest in a home before it's built, at a lower entry price — full details coming soon."
     />
   );
 }

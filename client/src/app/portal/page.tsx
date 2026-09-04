@@ -13,9 +13,7 @@ export default async function PortalDashboardPage() {
   return (
     <PageStub
       title="Your dashboard"
-      intro="Referrals, pipeline, earnings, inventory sheets, marketing asset library, referral links, commission statements (PRD §8.4)."
-      prdRef="PRD §8.4"
-      todo="Fetch GET /realtors/me from the server API (bearer token = Clerk session token) once the account exists."
+      intro="Your realtor dashboard — referrals, pipeline, earnings, inventory sheets and marketing assets in one place."
     />
   );
 }

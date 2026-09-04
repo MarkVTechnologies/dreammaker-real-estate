@@ -76,8 +76,6 @@ export function Footer() {
               <Mail className="h-3.5 w-3.5" aria-hidden="true" />
               {nap.email}
             </a>
-            <span aria-hidden="true">·</span>
-            <span>RC: TODO (confirm before launch, PRD §16)</span>
           </p>
           <p>&copy; {new Date().getFullYear()} {nap.legalName}. All rights reserved.</p>
         </div>

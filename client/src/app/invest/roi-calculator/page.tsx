@@ -20,9 +20,8 @@ export default function RoiCalculatorPage() {
           ROI calculator
         </h1>
         <p className="mt-4 max-w-xl text-ink-600">
-          A standalone tool that earns links and captures email (PRD §10.2). Fires
-          the <code className="rounded bg-navy-100 px-1.5 py-0.5 text-sm">roi_calculator_used</code> GA4
-          event on interaction (PRD §12).
+          Estimate the projected value of a land investment on the Lekki–Epe corridor. Enter your
+          numbers below to get a quick projection.
         </p>
         <div className="mt-8">
           <RoiCalculator />

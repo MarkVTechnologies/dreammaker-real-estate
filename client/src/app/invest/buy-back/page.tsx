@@ -10,9 +10,7 @@ export default function BuyBackPage() {
   return (
     <PageStub
       title="Buy-back"
-      intro="Structured short-term product (PRD §7)."
-      prdRef="PRD §16 open question 5"
-      todo="Blocked on client confirmation: does DreamMaker offer this product today, and on what contractual terms?"
+      intro="A structured short-term buy-back product — details on terms and eligibility are coming soon."
     />
   );
 }

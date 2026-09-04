@@ -30,8 +30,7 @@ export default async function LocationGuidePage({ params }: Props) {
   return (
     <PageStub
       title={`${locality} area guide`}
-      intro="Informational area guide (PRD §7) — distinct from /land-for-sale/lagos/[locality] which is commercial-intent."
-      prdRef="PRD §7"
+      intro="A local area guide for this location — infrastructure, amenities and what it's like to live or invest here. Coming soon."
     />
   );
 }

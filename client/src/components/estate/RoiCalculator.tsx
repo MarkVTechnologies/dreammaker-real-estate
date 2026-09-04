@@ -78,9 +78,8 @@ export function RoiCalculator() {
 
       <p className="mt-4 flex items-start gap-2 text-xs text-ink-600">
         <TriangleAlert className="mt-0.5 h-3.5 w-3.5 shrink-0 text-warning" aria-hidden="true" />
-        Illustrative only, not a guarantee — replace the default appreciation
-        rate with a figure backed by real DreamMaker price history and cleared
-        by legal review before launch (PRD §15).
+        Illustrative only, not a guarantee of future returns. Adjust the
+        appreciation rate above to model your own assumptions.
       </p>
     </div>
   );

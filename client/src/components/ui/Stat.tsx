@@ -32,7 +32,7 @@ export function Stat({ icon, label, value, suffix = "" }: StatProps) {
         </dd>
       ) : (
         <dd className="mt-0.5 rounded-full border border-dashed border-ink-300 px-3 py-1 text-xs font-medium text-ink-600">
-          Confirm at Week 0
+          Ask us
         </dd>
       )}
     </div>

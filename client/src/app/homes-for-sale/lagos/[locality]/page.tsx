@@ -18,9 +18,7 @@ export default async function HomesForSaleLocalityPage({ params }: Props) {
   return (
     <PageStub
       title={`Homes for sale in ${locality}`}
-      intro="Same programmatic pattern as /land-for-sale, applied to built units (PRD §7)."
-      prdRef="PRD §7, §9.2 Residence/Accommodation schema"
-      todo="Same 400+ unique-word content rule applies (PRD §8.3)."
+      intro={`Homes for sale in ${locality} — pricing, available units and neighbourhood details are coming soon.`}
     />
   );
 }

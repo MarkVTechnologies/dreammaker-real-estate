@@ -31,9 +31,7 @@ export default async function GuidePage({ params }: Props) {
   return (
     <PageStub
       title={slug}
-      intro="Answer-first structure (PRD §9.5): the directAnswer field renders immediately below H1, before the expanded body."
-      prdRef="PRD §8.5"
-      todo="Render guide.body (Portable Text) from Sanity once content is authored in /studio."
+      intro="This guide is being finalized — check back soon, or reach out to our team for the answer today."
     />
   );
 }

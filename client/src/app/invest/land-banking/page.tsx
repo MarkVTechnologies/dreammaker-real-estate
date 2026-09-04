@@ -10,9 +10,7 @@ export default function LandBankingPage() {
   return (
     <PageStub
       title="Land banking"
-      intro="Named investment product with an inline lead form and duration selector (PRD §3.1, modeled on Kemchuta's 'Buy2Sell')."
-      prdRef="PRD §9.3 keyword: land banking in Nigeria"
-      todo="Legal review required before publishing any return figures — no guaranteed language without contractual backing (PRD §15)."
+      intro="Hold land in a high-growth corridor as a medium-term investment — full details coming soon."
     />
   );
 }

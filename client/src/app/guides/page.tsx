@@ -9,9 +9,7 @@ export default function GuidesIndexPage() {
   return (
     <PageStub
       title="Guides"
-      intro="The SEO engine (PRD §8.5): 10 pillar pages, 1,500–2,500 words each, each answering its question in the first 40-60 words."
-      prdRef="PRD §8.5"
-      todo="Populate from Sanity 'guide' documents; every guide must link to 3+ estates (PRD §9.1 internal linking)."
+      intro="In-depth buying guides for land and homes in Lagos and Ogun State — currently being written."
     />
   );
 }

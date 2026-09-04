@@ -42,7 +42,6 @@ export async function FeaturedEstates() {
         </Link>
       </Reveal>
 
-      {/* TODO: location / budget / plot size / title type filter form routing to /projects?query */}
       <Reveal delay={0.05}>
         <form
           action="/projects"
@@ -89,7 +88,6 @@ export async function FeaturedEstates() {
         <Reveal delay={0.1}>
           <div className="mt-8 flex flex-col items-center gap-3 rounded-xl border border-dashed border-ink-300 bg-navy-50 px-6 py-16 text-center">
             <Building2 className="h-8 w-8 text-navy-400" aria-hidden="true" strokeWidth={1.5} />
-            {/* TODO: replace with live CMS/Prisma query once inventory is loaded */}
             <p className="text-sm text-ink-600">
               No estates loaded yet — connect the CMS/estate data source.
             </p>

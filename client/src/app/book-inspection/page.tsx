@@ -13,12 +13,15 @@ export default function BookInspectionPage() {
       <div className="relative mx-auto max-w-md px-4 py-20 sm:px-6 lg:px-8">
         <span className="inline-flex items-center gap-1.5 rounded-full bg-navy-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-navy-700">
           <CalendarCheck className="h-3.5 w-3.5" aria-hidden="true" />
-          PRD §7, §10.1
+          Free inspection
         </span>
         <h1 className="mt-4 font-display text-3xl font-bold text-navy-900 sm:text-4xl">
           Book an inspection
         </h1>
-        <p className="mt-2 text-ink-600">Primary conversion path — physical inspection.</p>
+        <p className="mt-2 text-ink-600">
+          See any of our estates in person. Fill in your details and our team will confirm a time
+          with you.
+        </p>
         <div className="mt-8 rounded-2xl border border-navy-100 bg-white p-6 shadow-sm">
           <InspectionForm variant="INSPECTION" />
         </div>

@@ -9,8 +9,7 @@ export default function MediaPage() {
   return (
     <PageStub
       title="Media"
-      intro="Third-party corroboration matters as much as on-site work for AI visibility (PRD §9.5 point 4) — Guardian feature and other press go here."
-      prdRef="PRD §7, §9.5"
+      intro="Press features and media coverage of DreamMaker Real Estate Ltd — this page is being put together."
     />
   );
 }

@@ -31,7 +31,6 @@ export function OurStory() {
               <span className="flex h-16 w-16 items-center justify-center rounded-full bg-gold-500 text-navy-950 transition-transform duration-300 group-hover:scale-105">
                 <Play className="h-6 w-6" aria-hidden="true" fill="currentColor" />
               </span>
-              {/* TODO: one estate walkthrough per month, published with full transcript (PRD §9.6) */}
               <span className="text-sm font-medium text-navy-200">Estate walkthrough — video pending</span>
             </div>
           </div>

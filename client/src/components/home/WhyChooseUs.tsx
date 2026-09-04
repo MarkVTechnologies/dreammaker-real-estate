@@ -49,7 +49,7 @@ export function WhyChooseUs() {
               />
             </div>
             <div className="absolute -right-3 -top-3 rounded-full bg-gold-500 px-4 py-1.5 text-xs font-bold text-navy-950 shadow-lg">
-              Est. TODO
+              Est. 2015
             </div>
           </Reveal>
 

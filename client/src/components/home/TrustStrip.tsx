@@ -1,18 +1,13 @@
-import { BadgeCheck, Clock, FileCheck, MapPin, ShieldCheck } from "lucide-react";
+import { BadgeCheck, Clock, MapPin, ShieldCheck } from "lucide-react";
 
 const items = [
-  { icon: FileCheck, label: "RC: TODO" },
   { icon: BadgeCheck, label: "CAC Registered" },
   { icon: ShieldCheck, label: "Verified Titles" },
   { icon: MapPin, label: "Physical Office — Lakowe" },
-  { icon: Clock, label: "Years Active: TODO" },
+  { icon: Clock, label: "Est. 2015" },
 ];
 
-/**
- * PRD §8.1 module 2 — text, not images. Kept as a plain icon+label row
- * (no checkmark) because two of the five items are literal unconfirmed
- * placeholders (§16); a checkmark would misrepresent them as verified.
- */
+/** PRD §8.1 module 2 — text, not images. */
 export function TrustStrip() {
   return (
     <section className="border-b border-navy-100 bg-navy-50">

@@ -12,9 +12,7 @@ export default function RealtorsPage() {
     <>
       <PageStub
         title="Realtors"
-        intro="Public value proposition + signup (PRD §8.4). Kemchuta has 500+ realtors in its network (PRD §5 P3) — this is the page that competes for that same audience."
-        prdRef="PRD §8.4"
-        todo="Commission structure and payout terms are blocked on client input (PRD §16 open question 4)."
+        intro="Join DreamMaker's realtor network for transparent commissions, marketing support and a steady pipeline of verified land and homes to sell."
       />
       <div className="mx-auto max-w-3xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link

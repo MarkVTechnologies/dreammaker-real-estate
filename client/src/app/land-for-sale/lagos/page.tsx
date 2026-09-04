@@ -10,9 +10,7 @@ export default function LandForSaleLagosHubPage() {
   return (
     <PageStub
       title="Land for sale in Lagos"
-      intro="Programmatic state hub, linking down to each locality (PRD §7, §9.3 keyword map)."
-      prdRef="PRD §8.3"
-      todo="Link to all locality pages below; each locality page needs 400+ genuinely unique words — no page ships without unique research (PRD §8.3 hard rule)."
+      intro="Land for sale across the Lekki–Epe corridor — this locality hub page is being finalized. See our current listings on the projects page."
     />
   );
 }
