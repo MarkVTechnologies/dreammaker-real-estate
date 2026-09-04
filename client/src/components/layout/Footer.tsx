@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { footerSitemap, nap } from "@/lib/nav";
@@ -14,7 +15,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-6">
           <div className="col-span-2 lg:col-span-1">
-            <span className="font-display text-lg font-bold text-white">
+            <span className="flex items-center gap-2 font-display text-lg font-bold text-white">
+              <Image src="/logo/dreammaker-mark-white.svg" alt="" width={26} height={26} className="h-[26px] w-[26px]" aria-hidden="true" />
               Dream<span className="text-gold-500">Maker</span>
             </span>
             <p className="mt-3 max-w-[22ch] text-sm text-navy-100">

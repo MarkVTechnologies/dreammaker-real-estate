@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 import { primaryNav } from "@/lib/nav";
@@ -9,7 +10,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-navy-100 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="font-display text-xl font-bold tracking-tight text-navy-900">
+        <Link href="/" className="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-navy-900">
+          <Image src="/logo/dreammaker-mark-navy.svg" alt="" width={28} height={28} className="h-7 w-7" aria-hidden="true" />
           Dream<span className="text-gold-600">Maker</span>
         </Link>
 
