@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, CalendarDays, Clock, User } from "lucide-react";
 import { InsightCard } from "@/components/insights/InsightCard";
 import { WhatsAppLink } from "@/components/layout/WhatsAppLink";
-import { MediaPlaceholder } from "@/components/ui/MediaPlaceholder";
 import { Reveal } from "@/components/ui/Reveal";
-import { categorySlug, formatPostDate, getPostBySlug, getRelatedPosts } from "@/lib/insights";
+import { getPostBySlug, getRelatedPosts } from "@/lib/db/posts";
+import { categorySlug, formatPostDate } from "@/lib/insights";
+
+// Never cached: posts are edited live via /admin.
+export const dynamic = "force-dynamic";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -14,7 +18,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
   if (!post) return { title: "Post not found" };
 
   return {
@@ -25,10 +29,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function InsightPostPage({ params }: Props) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
   if (!post) notFound();
 
-  const related = getRelatedPosts(post);
+  const related = await getRelatedPosts(post);
 
   return (
     <div className="relative overflow-hidden">
@@ -62,7 +66,16 @@ export default async function InsightPostPage({ params }: Props) {
         </Reveal>
 
         <Reveal delay={0.05}>
-          <MediaPlaceholder label="Cover image pending" className="mt-8 aspect-[16/9] w-full" />
+          <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-navy-100">
+            <Image
+              src={post.coverImage}
+              alt={post.title}
+              fill
+              sizes="(min-width: 1024px) 768px, 100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
         </Reveal>
 
         <Reveal delay={0.1}>
@@ -72,6 +85,18 @@ export default async function InsightPostPage({ params }: Props) {
             ))}
           </div>
         </Reveal>
+
+        {post.gallery && post.gallery.length > 0 && (
+          <Reveal delay={0.12}>
+            <div className="mt-10 grid gap-4 sm:grid-cols-2">
+              {post.gallery.map((src) => (
+                <div key={src} className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-navy-100">
+                  <Image src={src} alt={post.title} fill sizes="(min-width: 640px) 380px, 100vw" className="object-cover" />
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        )}
 
         <Reveal delay={0.15}>
           <div className="mt-12 flex flex-col gap-4 rounded-2xl border border-navy-100 bg-navy-50 p-6 sm:flex-row sm:items-center sm:justify-between">

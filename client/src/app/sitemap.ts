@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { categories, categorySlug, insightPosts } from "@/lib/insights";
+import { getAllPosts } from "@/lib/db/posts";
+import { categories, categorySlug } from "@/lib/insights";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://dreammaker.com.ng";
 
@@ -36,9 +37,10 @@ const staticRoutes = [
   "/legal/refund-policy",
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const posts = await getAllPosts();
   const insightRoutes = [
-    ...insightPosts.map((post) => `/insights/${post.slug}`),
+    ...posts.map((post) => `/insights/${post.slug}`),
     ...categories.map((category) => `/insights/category/${categorySlug(category)}`),
   ];
 

@@ -1,15 +1,23 @@
+import Image from "next/image";
 import Link from "next/link";
 import { CalendarDays, Clock } from "lucide-react";
-import { MediaPlaceholder } from "@/components/ui/MediaPlaceholder";
 import { formatPostDate, type InsightPost } from "@/lib/insights";
 
-export function InsightCard({ post, delay = 0 }: { post: InsightPost; delay?: number }) {
+export function InsightCard({ post }: { post: InsightPost }) {
   return (
     <Link
       href={`/insights/${post.slug}`}
       className="group flex h-full flex-col overflow-hidden rounded-xl border border-navy-100 bg-white transition-shadow duration-300 hover:shadow-xl hover:shadow-navy-950/10"
     >
-      <MediaPlaceholder label="Cover image pending" className="aspect-[16/9] w-full" delay={delay} />
+      <div className="relative aspect-[16/9] w-full overflow-hidden bg-navy-100">
+        <Image
+          src={post.coverImage}
+          alt={post.title}
+          fill
+          sizes="(min-width: 1024px) 380px, 100vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
       <div className="flex flex-1 flex-col p-5">
         <span className="inline-flex w-fit items-center rounded-full bg-navy-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-navy-700">
           {post.category}

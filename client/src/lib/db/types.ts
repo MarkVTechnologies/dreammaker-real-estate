@@ -117,3 +117,19 @@ export interface PaymentDoc {
   createdAt: Date;
   updatedAt: Date;
 }
+
+export interface PostDoc {
+  _id: ObjectId;
+  slug: string;
+  title: string;
+  category: string;
+  excerpt: string;
+  body: string[];
+  coverImage: string;
+  gallery: string[] | null;
+  author: string;
+  publishedAt: Date;
+  featured: boolean;
+  createdAt: Date;
+  updatedAt: Date;
+}

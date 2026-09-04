@@ -46,3 +46,16 @@ export const plotSchema = z.object({
   status: z.enum(["AVAILABLE", "RESERVED", "SOLD"]),
   orientation: z.string().nullable().optional(),
 });
+
+export const postSchema = z.object({
+  slug: z.string().min(1).regex(/^[a-z0-9-]+$/, "Lowercase letters, numbers and hyphens only"),
+  title: z.string().min(1),
+  category: z.string().min(1),
+  excerpt: z.string().min(1),
+  body: z.array(z.string().min(1)).min(1),
+  coverImage: z.string().min(1),
+  gallery: z.array(z.string()).nullable().optional(),
+  author: z.string().min(1),
+  publishedAt: z.string().min(1),
+  featured: z.boolean().optional(),
+});

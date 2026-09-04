@@ -4,7 +4,11 @@ import { notFound } from "next/navigation";
 import { FileText } from "lucide-react";
 import { InsightCard } from "@/components/insights/InsightCard";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { categories, categorySlug, getPostsByCategory } from "@/lib/insights";
+import { getPostsByCategory } from "@/lib/db/posts";
+import { categories, categorySlug } from "@/lib/insights";
+
+// Never cached: posts are edited live via /admin.
+export const dynamic = "force-dynamic";
 
 interface Props {
   params: Promise<{ category: string }>;
@@ -30,7 +34,7 @@ export default async function InsightsCategoryPage({ params }: Props) {
   const label = findCategory(category);
   if (!label) notFound();
 
-  const posts = getPostsByCategory(label);
+  const posts = await getPostsByCategory(label);
 
   return (
     <div className="relative overflow-hidden">
@@ -45,9 +49,9 @@ export default async function InsightsCategoryPage({ params }: Props) {
 
         {posts.length > 0 ? (
           <RevealGroup className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post, i) => (
+            {posts.map((post) => (
               <RevealItem key={post.slug}>
-                <InsightCard post={post} delay={i * 0.05} />
+                <InsightCard post={post} />
               </RevealItem>
             ))}
           </RevealGroup>

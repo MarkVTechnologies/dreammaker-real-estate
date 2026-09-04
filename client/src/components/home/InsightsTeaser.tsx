@@ -2,15 +2,16 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { InsightCard } from "@/components/insights/InsightCard";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { getAllPosts } from "@/lib/insights";
+import { getAllPosts } from "@/lib/db/posts";
 
 /**
  * PRD §8.1 module 11 — kept as its own light band (Kemchuta has no direct
  * equivalent; this is DreamMaker's differentiator per PRD §3.1 "no visible
  * blog or content layer — this is where DreamMaker overtakes them").
  */
-export function InsightsTeaser() {
-  const posts = getAllPosts().slice(0, 3);
+export async function InsightsTeaser() {
+  const allPosts = await getAllPosts();
+  const posts = allPosts.slice(0, 3);
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
@@ -31,9 +32,9 @@ export function InsightsTeaser() {
       </Reveal>
 
       <RevealGroup className="mt-8 grid gap-6 sm:grid-cols-3">
-        {posts.map((post, i) => (
+        {posts.map((post) => (
           <RevealItem key={post.slug}>
-            <InsightCard post={post} delay={i * 0.05} />
+            <InsightCard post={post} />
           </RevealItem>
         ))}
       </RevealGroup>
