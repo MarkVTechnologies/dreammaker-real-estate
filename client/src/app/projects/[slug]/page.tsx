@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { EstateBookInspectionButton } from "@/components/estate/EstateBookInspectionButton";
 import { EstateGallery } from "@/components/estate/EstateGallery";
+import { EstateWhatsAppBar } from "@/components/estate/EstateWhatsAppBar";
 import { WhatsAppLink } from "@/components/layout/WhatsAppLink";
 import { Reveal } from "@/components/ui/Reveal";
 import { getEstateDetailBySlug } from "@/lib/db/estates";
@@ -62,6 +63,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
   return (
     <div className="relative overflow-hidden">
+      <EstateWhatsAppBar estateName={estate.name} message={whatsappMessage} />
       <div className="bg-grid-navy pointer-events-none absolute inset-x-0 top-0 h-72 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
 
       {/* Hero */}
