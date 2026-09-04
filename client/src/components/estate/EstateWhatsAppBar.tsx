@@ -40,7 +40,7 @@ export function EstateWhatsAppBar({ estateName, message }: EstateWhatsAppBarProp
         <div className="relative mx-auto flex h-full max-w-7xl items-center justify-center px-3 sm:px-6">
           <WhatsAppLink
             message={message}
-            className="group flex items-center gap-2 rounded-full bg-navy-950 py-2 pl-2 pr-3.5 shadow-lg shadow-navy-950/50 ring-1 ring-white/10 transition-transform duration-200 hover:scale-[1.04] sm:gap-3 sm:py-2.5 sm:pl-2.5 sm:pr-5"
+            className="group flex max-w-full items-center gap-2 rounded-full bg-navy-950 py-2 pl-2 pr-3.5 shadow-lg shadow-navy-950/50 ring-1 ring-white/10 transition-transform duration-200 hover:scale-[1.04] sm:gap-3 sm:py-2.5 sm:pl-2.5 sm:pr-5"
           >
             <motion.span
               animate={{ scale: [1, 1.15, 1] }}
@@ -58,10 +58,11 @@ export function EstateWhatsAppBar({ estateName, message }: EstateWhatsAppBarProp
               />
             </motion.span>
 
-            <span className="text-xs font-bold leading-tight text-white sm:hidden">
-              Invest in {estateName} — chat now
+            {/* Single-line always: truncates rather than wraps, so the pill height never grows. */}
+            <span className="min-w-0 flex-1 truncate whitespace-nowrap text-xs font-bold text-white sm:hidden">
+              Chat to invest in {estateName}
             </span>
-            <span className="hidden text-sm font-bold text-white sm:inline sm:text-base">
+            <span className="hidden min-w-0 flex-1 truncate whitespace-nowrap text-sm font-bold text-white sm:inline sm:text-base">
               Chat on WhatsApp to invest in{" "}
               <span className="text-gold-500">{estateName}</span>
             </span>
