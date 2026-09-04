@@ -1,21 +1,22 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Camera } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 
 const tiles = [
-  "row-span-2",
-  "",
-  "",
-  "row-span-2",
-  "",
-  "",
+  { src: "/images/insights/general-site-updates/01.jpg", span: "row-span-2" },
+  { src: "/images/insights/general-site-updates/06.jpg", span: "" },
+  { src: "/images/insights/general-site-updates/03.jpg", span: "" },
+  { src: "/images/insights/general-site-updates/12.jpg", span: "row-span-2" },
+  { src: "/images/insights/general-site-updates/05.jpg", span: "" },
+  { src: "/images/insights/general-site-updates/19.jpg", span: "" },
 ];
 
 /**
- * Masonry allocation-day gallery, restyled after kemchutahomesltd.com's
- * "Updates & Activities" grid (PRD §3.1: "the highest-trust module on the
- * site"). Tiles are honest placeholders, not stand-in photography — PRD
- * §6.4 rules out stock imagery, and no real allocation photos exist yet.
+ * Masonry gallery, restyled after kemchutahomesltd.com's "Updates &
+ * Activities" grid (PRD §3.1: "the highest-trust module on the site").
+ * Real photos from the "General Site Updates" post — Add Cocoa Farm Estate
+ * and MetaLand site visits, signage installs and land clearing.
  */
 export function UpdatesGallery() {
   return (
@@ -27,25 +28,33 @@ export function UpdatesGallery() {
             Updates &amp; Activities
           </h2>
           <p className="mt-2 max-w-md text-sm text-ink-600">
-            Dated photographic proof of recent allocation days — wire to CMS.
+            Real photos from recent site visits and estate activity across our developments.
           </p>
         </div>
         <Link
-          href="/media"
+          href="/insights/general-site-updates"
           className="inline-flex items-center gap-1 font-medium text-navy-700 hover:text-navy-900"
         >
-          View all developments
+          View all updates
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </Link>
       </Reveal>
 
       <RevealGroup className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:[grid-auto-rows:9rem]">
-        {tiles.map((span, i) => (
-          <RevealItem key={i} className={span}>
-            <div className="flex h-full min-h-32 w-full flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-ink-300 bg-navy-50 text-navy-400">
-              <Camera className="h-6 w-6" aria-hidden="true" strokeWidth={1.5} />
-              <span className="text-xs font-medium">Photo pending</span>
-            </div>
+        {tiles.map((tile, i) => (
+          <RevealItem key={i} className={tile.span}>
+            <Link
+              href="/insights/general-site-updates"
+              className="relative block h-full min-h-32 w-full overflow-hidden rounded-xl bg-navy-100"
+            >
+              <Image
+                src={tile.src}
+                alt="DreamMaker site update"
+                fill
+                sizes="(min-width: 640px) 33vw, 50vw"
+                className="object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </Link>
           </RevealItem>
         ))}
       </RevealGroup>
