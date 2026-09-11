@@ -3,7 +3,7 @@ import { PageStub } from "@/components/ui/PageStub";
 export const metadata = {
   title: "Buy-Back Program — Structured Short-Term Property Investment",
   description:
-    "DreamMaker's structured buy-back product — terms, timeline and how it differs from land banking and off-plan.",
+    "DreamMakers' structured buy-back product — terms, timeline and how it differs from land banking and off-plan.",
 };
 
 export default function BuyBackPage() {

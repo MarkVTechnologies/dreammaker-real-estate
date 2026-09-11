@@ -12,7 +12,7 @@ export async function sendLeadNotification(lead: LeadDoc) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   await resend.emails.send({
-    from: process.env.EMAIL_FROM ?? "DreamMaker Real Estate <no-reply@dreammaker.com.ng>",
+    from: process.env.EMAIL_FROM ?? "DreamMakers Real Estate <no-reply@dreammaker.com.ng>",
     to: process.env.LEADS_INBOX_EMAIL ?? "leads@dreammaker.com.ng",
     subject: `New ${lead.type.toLowerCase().replace("_", " ")} lead — ${lead.name}`,
     text: [

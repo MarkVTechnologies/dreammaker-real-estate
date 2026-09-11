@@ -8,7 +8,7 @@ import { nap } from "@/lib/nav";
 import { whatsappLink } from "@/lib/whatsapp";
 
 const AUTO_OPEN_DELAY_MS = 3500;
-const GREETING_MESSAGE = "Hi DreamMaker, I'd like to know more about your estates.";
+const GREETING_MESSAGE = "Hi DreamMakers, I'd like to know more about your estates.";
 
 /**
  * Floating WhatsApp entry point on every page. Collapsed state is a round,
@@ -75,7 +75,7 @@ export function WhatsAppWidget() {
                   <span className="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-navy-950 bg-success" aria-hidden="true" />
                 </div>
                 <div>
-                  <p className="font-display font-semibold text-white">DreamMaker Support</p>
+                  <p className="font-display font-semibold text-white">DreamMakers Support</p>
                   <p className="text-sm text-navy-100">Real Estate Sales Team</p>
                   <p className="mt-0.5 flex items-center gap-1.5 text-xs font-medium text-gold-500">
                     <span className="h-1.5 w-1.5 rounded-full bg-gold-500" aria-hidden="true" />
@@ -142,7 +142,7 @@ export function WhatsAppWidget() {
           target="_blank"
           rel="noopener noreferrer"
           data-event="whatsapp_click"
-          aria-label="Chat with DreamMaker on WhatsApp"
+          aria-label="Chat with DreamMakers on WhatsApp"
           className="relative flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-white shadow-lg shadow-whatsapp/40 transition-transform hover:scale-105"
         >
           <span className="absolute inset-0 animate-ping rounded-full bg-whatsapp opacity-75" aria-hidden="true" />

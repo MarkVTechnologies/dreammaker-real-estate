@@ -28,7 +28,7 @@ export function MobileStickyBar() {
         Call
       </a>
       <WhatsAppLink
-        message="Hi DreamMaker, I'd like to know more about your estates."
+        message="Hi DreamMakers, I'd like to know more about your estates."
         className="flex flex-col items-center justify-center gap-0.5 border-x border-navy-100 py-2.5 text-xs font-medium text-whatsapp active:bg-navy-50"
       >
         <MessageCircle className="h-4 w-4" aria-hidden="true" />

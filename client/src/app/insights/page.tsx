@@ -10,8 +10,8 @@ import { categories, categorySlug, formatPostDate } from "@/lib/insights";
 export const dynamic = "force-dynamic";
 
 export const metadata = {
-  title: "Insights — DreamMaker Real Estate Blog",
-  description: "Market reports, estate progress updates, buying guides and location guides from DreamMaker Real Estate Ltd.",
+  title: "Insights — DreamMakers Real Estate Blog",
+  description: "Market reports, estate progress updates, buying guides and location guides from DreamMakers Real Estate Ltd.",
 };
 
 export default async function InsightsIndexPage() {

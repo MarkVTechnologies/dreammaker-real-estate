@@ -3,7 +3,7 @@ import { Reveal } from "@/components/ui/Reveal";
 const milestones = [
   {
     year: "2015",
-    title: "DreamMaker is founded",
+    title: "DreamMakers is founded",
     description: "Started with a single plot on the Lekki–Epe corridor and a small sales team.",
   },
   {
@@ -19,7 +19,7 @@ const milestones = [
   {
     year: "2024",
     title: "Realtor network launched",
-    description: "Opened DreamMaker's referral program, giving independent realtors a transparent commission pipeline.",
+    description: "Opened DreamMakers' referral program, giving independent realtors a transparent commission pipeline.",
   },
   {
     year: "2026",

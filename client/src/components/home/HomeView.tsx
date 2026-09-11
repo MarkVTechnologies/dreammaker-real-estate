@@ -39,7 +39,7 @@ export async function HomeView() {
 
       <div className="mx-auto max-w-7xl px-4 py-10 text-center sm:px-6 lg:px-8">
         <WhatsAppLink
-          message="Hi DreamMaker, I'm interested in your estates."
+          message="Hi DreamMakers, I'm interested in your estates."
           className="inline-flex items-center gap-1.5 text-sm font-semibold text-whatsapp hover:underline"
         >
           Chat with us on WhatsApp

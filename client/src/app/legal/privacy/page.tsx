@@ -1,8 +1,8 @@
 import { nap } from "@/lib/nav";
 
 export const metadata = {
-  title: "Privacy Policy — DreamMaker Real Estate",
-  description: "DreamMaker Real Estate Ltd privacy policy — how we handle your personal data.",
+  title: "Privacy Policy — DreamMakers Real Estate",
+  description: "DreamMakers Real Estate Ltd privacy policy — how we handle your personal data.",
 };
 
 export default function PrivacyPage() {

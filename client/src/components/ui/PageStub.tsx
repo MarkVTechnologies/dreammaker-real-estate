@@ -24,7 +24,7 @@ export function PageStub({ title, intro }: PageStubProps) {
             In the meantime, reach our team directly and we&apos;ll help with this over WhatsApp or a call.
           </p>
           <WhatsAppLink
-            message={`Hi DreamMaker, I was looking for more on "${title}" on your website.`}
+            message={`Hi DreamMakers, I was looking for more on "${title}" on your website.`}
             className="mt-6 inline-flex items-center justify-center gap-2 rounded-md bg-whatsapp px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-whatsapp/90"
           >
             Chat on WhatsApp

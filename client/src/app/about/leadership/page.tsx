@@ -7,7 +7,7 @@ import { advisoryBoard, executiveTeam, type TeamMember } from "@/lib/team";
 export const metadata = {
   title: "Leadership — Ejieh Paradise Godstime, Managing Director",
   description:
-    "Meet DreamMaker's Managing Director Ejieh Paradise Godstime and the executive team and advisory board leading the company's estates across Lagos and Ogun State.",
+    "Meet DreamMakers' Managing Director Ejieh Paradise Godstime and the executive team and advisory board leading the company's estates across Lagos and Ogun State.",
 };
 
 function ExecutiveProfile({ leader, reverse = false }: { leader: TeamMember; reverse?: boolean }) {
@@ -65,11 +65,11 @@ export default function LeadershipPage() {
             Leadership
           </span>
           <h1 className="mt-4 font-display text-4xl font-bold text-navy-900 sm:text-5xl">
-            The people behind DreamMaker
+            The people behind DreamMakers
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-lg text-ink-600">
             Named leadership, real credentials — the executive team and advisory board running
-            DreamMaker's estates day to day.
+            DreamMakers' estates day to day.
           </p>
         </Reveal>
       </div>
@@ -91,7 +91,7 @@ export default function LeadershipPage() {
             </h2>
             <p className="mt-4 text-lg text-ink-600">
               Independent advisors who bring legal, marketing, and business expertise to
-              DreamMaker's biggest decisions.
+              DreamMakers' biggest decisions.
             </p>
           </Reveal>
 

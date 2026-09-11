@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 export const metadata = {
   title: "Our Projects — Estates for Sale in Lagos & Ogun",
   description:
-    "Browse DreamMaker's project portfolio — title status, starting price, deposit and plot size on every listing.",
+    "Browse DreamMakers' project portfolio — title status, starting price, deposit and plot size on every listing.",
 };
 
 export default async function ProjectsIndexPage() {

@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!label) return { title: "Category not found" };
 
   return {
-    title: `${label} — DreamMaker Insights`,
-    description: `DreamMaker insights posts in the ${label} category.`,
+    title: `${label} — DreamMakers Insights`,
+    description: `DreamMakers insights posts in the ${label} category.`,
   };
 }
 

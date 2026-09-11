@@ -10,9 +10,9 @@ import { WhatsAppLink } from "@/components/layout/WhatsAppLink";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata = {
-  title: "About DreamMaker Real Estate Ltd",
+  title: "About DreamMakers Real Estate Ltd",
   description:
-    "DreamMaker Real Estate Ltd — a Lagos developer on the Lekki–Epe corridor with a physical office, real construction delivery and named leadership.",
+    "DreamMakers Real Estate Ltd — a Lagos developer on the Lekki–Epe corridor with a physical office, real construction delivery and named leadership.",
 };
 
 export default function AboutPage() {
@@ -44,7 +44,7 @@ export default function AboutPage() {
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
               <WhatsAppLink
-                message="Hi DreamMaker, I'd like to know more about the company."
+                message="Hi DreamMakers, I'd like to know more about the company."
                 className="inline-flex items-center gap-2 rounded-md border border-white/20 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
               >
                 Chat on WhatsApp

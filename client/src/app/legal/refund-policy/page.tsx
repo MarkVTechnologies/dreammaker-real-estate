@@ -1,8 +1,8 @@
 import { nap } from "@/lib/nav";
 
 export const metadata = {
-  title: "Refund Policy — DreamMaker Real Estate",
-  description: "DreamMaker Real Estate Ltd refund policy for deposits and instalments.",
+  title: "Refund Policy — DreamMakers Real Estate",
+  description: "DreamMakers Real Estate Ltd refund policy for deposits and instalments.",
 };
 
 export default function RefundPolicyPage() {

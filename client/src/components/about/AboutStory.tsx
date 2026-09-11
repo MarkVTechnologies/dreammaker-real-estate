@@ -12,7 +12,7 @@ export function AboutStory() {
           </h2>
           <div className="mt-6 space-y-4 text-lg leading-relaxed text-ink-600">
             <p>
-              DreamMaker Real Estate Ltd was founded on a simple frustration shared by too many
+              DreamMakers Real Estate Ltd was founded on a simple frustration shared by too many
               Nigerians: paying for land that never comes with a clean title, or an estate that
               stalls halfway through construction. We set out to build the opposite — every
               plot documented, every allocation traceable, every promise followed through to a

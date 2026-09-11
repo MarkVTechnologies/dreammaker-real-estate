@@ -12,7 +12,7 @@ export interface InsightPost {
   featured?: boolean;
 }
 
-/** Real categories used by DreamMaker's own News & Updates posts. */
+/** Real categories used by DreamMakers' own News & Updates posts. */
 export const categories = ["Press Release", "News", "Real Estate Tips & Articles"] as const;
 
 export function categorySlug(category: string): string {

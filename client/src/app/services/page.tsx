@@ -7,7 +7,7 @@ import { services } from "@/lib/services";
 export const metadata = {
   title: "Real Estate Services — Development, Construction & Project Management",
   description:
-    "DreamMaker's services: property development, construction management, project management, property management and title perfection.",
+    "DreamMakers' services: property development, construction management, project management, property management and title perfection.",
 };
 
 const differentiators = [
@@ -76,7 +76,7 @@ export default function ServicesHubPage() {
               Full-cycle real estate delivery, in-house
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg text-navy-100">
-              From acquiring the land to handing over the keys, DreamMaker runs development,
+              From acquiring the land to handing over the keys, DreamMakers runs development,
               construction, project management, property management and title perfection as
               one team — not five separate vendors.
             </p>
@@ -90,7 +90,7 @@ export default function ServicesHubPage() {
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
             <WhatsAppLink
-              message="Hi DreamMaker, I'd like to know more about your services."
+              message="Hi DreamMakers, I'd like to know more about your services."
               className="inline-flex items-center gap-2 rounded-md border border-white/20 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
             >
               Chat on WhatsApp
@@ -217,7 +217,7 @@ export default function ServicesHubPage() {
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
               <WhatsAppLink
-                message="Hi DreamMaker, I have a project I'd like to discuss."
+                message="Hi DreamMakers, I have a project I'd like to discuss."
                 className="inline-flex items-center gap-2 rounded-md border border-white/20 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
               >
                 Chat on WhatsApp

@@ -4,7 +4,7 @@ import { RoiCalculator } from "@/components/estate/RoiCalculator";
 export const metadata = {
   title: "ROI Calculator — Land Investment on the Lekki–Epe Corridor",
   description:
-    "Estimate the projected value of a land or property investment on the Lekki–Epe corridor with DreamMaker's ROI calculator.",
+    "Estimate the projected value of a land or property investment on the Lekki–Epe corridor with DreamMakers' ROI calculator.",
 };
 
 export default function RoiCalculatorPage() {

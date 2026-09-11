@@ -33,7 +33,7 @@ export function WhyChooseUs() {
         <Reveal className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wide text-gold-500">Our advantage</p>
           <h2 className="mt-2 font-display text-3xl font-bold sm:text-4xl">
-            Why choose DreamMaker
+            Why choose DreamMakers
           </h2>
         </Reveal>
 

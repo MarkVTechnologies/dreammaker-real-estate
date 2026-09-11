@@ -10,9 +10,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-navy-100 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-navy-900">
-          <Image src="/logo/dreammaker-mark-navy.svg" alt="" width={28} height={28} className="h-7 w-7" aria-hidden="true" />
-          Dream<span className="text-gold-600">Maker</span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo/dreammakers-lockup-navy.svg"
+            alt="DreamMakers Real Estate"
+            width={146}
+            height={36}
+            className="h-9 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -30,7 +35,7 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <WhatsAppLink
-            message="Hi DreamMaker, I'd like to know more about your estates."
+            message="Hi DreamMakers, I'd like to know more about your estates."
             className="hidden items-center justify-center rounded-full p-2.5 text-whatsapp transition-colors hover:bg-navy-50 sm:inline-flex"
           >
             <span className="sr-only">Chat on WhatsApp</span>

@@ -27,11 +27,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://dreammaker.com.ng"),
   title: {
-    default: "DreamMaker Real Estate Ltd — Land & Homes on the Lekki–Epe Corridor",
-    template: "%s | DreamMaker Real Estate Ltd",
+    default: "DreamMakers Real Estate Ltd — Land & Homes on the Lekki–Epe Corridor",
+    template: "%s | DreamMakers Real Estate Ltd",
   },
   description:
-    "DreamMaker builds on the Lekki–Epe corridor — verified titles, documented allocations, and payment plans from 30% down.",
+    "DreamMakers builds on the Lekki–Epe corridor — verified titles, documented allocations, and payment plans from 30% down.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

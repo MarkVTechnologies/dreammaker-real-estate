@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return { title: "Post not found" };
 
   return {
-    title: `${post.title} — DreamMaker Insights`,
+    title: `${post.title} — DreamMakers Insights`,
     description: post.excerpt,
   };
 }
@@ -105,7 +105,7 @@ export default async function InsightPostPage({ params }: Props) {
               <p className="mt-1 text-sm text-ink-600">We respond within 2 hours, 8am–8pm WAT.</p>
             </div>
             <WhatsAppLink
-              message={`Hi DreamMaker, I read "${post.title}" and had a question.`}
+              message={`Hi DreamMakers, I read "${post.title}" and had a question.`}
               className="inline-flex items-center justify-center gap-2 rounded-md bg-whatsapp px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-whatsapp/90"
             >
               Chat on WhatsApp

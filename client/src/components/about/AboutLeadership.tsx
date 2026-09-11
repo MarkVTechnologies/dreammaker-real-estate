@@ -13,7 +13,7 @@ export function AboutLeadership() {
             Real people, named leadership
           </p>
           <h2 className="mt-2 font-display text-3xl font-bold text-navy-900 sm:text-4xl">
-            The team behind DreamMaker
+            The team behind DreamMakers
           </h2>
         </div>
         <Link

@@ -49,7 +49,7 @@ export function UpdatesGallery() {
             >
               <Image
                 src={tile.src}
-                alt="DreamMaker site update"
+                alt="DreamMakers site update"
                 fill
                 sizes="(min-width: 640px) 33vw, 50vw"
                 className="object-cover transition-transform duration-300 hover:scale-105"

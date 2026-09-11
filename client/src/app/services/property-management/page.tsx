@@ -4,7 +4,7 @@ import { services } from "@/lib/services";
 export const metadata = {
   title: "Property Management Services — Lagos",
   description:
-    "DreamMaker's property management services for delivered estates and homes — infrastructure upkeep, security, and owner support.",
+    "DreamMakers' property management services for delivered estates and homes — infrastructure upkeep, security, and owner support.",
 };
 
 export default function PropertyManagementPage() {

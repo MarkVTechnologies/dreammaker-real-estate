@@ -2,7 +2,7 @@ import { PageStub } from "@/components/ui/PageStub";
 
 export const metadata = {
   title: "Buyer Guides — Titles, Diaspora Buying, Land Prices",
-  description: "DreamMaker's pillar guides: how to verify titles, buy from abroad, land banking, and more.",
+  description: "DreamMakers' pillar guides: how to verify titles, buy from abroad, land banking, and more.",
 };
 
 export default function GuidesIndexPage() {

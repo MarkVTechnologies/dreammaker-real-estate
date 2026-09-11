@@ -1,8 +1,8 @@
 import { nap } from "@/lib/nav";
 
 export const metadata = {
-  title: "Terms of Service — DreamMaker Real Estate",
-  description: "DreamMaker Real Estate Ltd terms of service.",
+  title: "Terms of Service — DreamMakers Real Estate",
+  description: "DreamMakers Real Estate Ltd terms of service.",
 };
 
 export default function TermsPage() {

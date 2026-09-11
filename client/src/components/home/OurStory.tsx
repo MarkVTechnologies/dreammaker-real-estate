@@ -16,7 +16,7 @@ export function OurStory() {
         <Reveal className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wide text-gold-500">Our story</p>
           <h2 className="mx-auto mt-2 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
-            See why the Lekki–Epe corridor trusts DreamMaker
+            See why the Lekki–Epe corridor trusts DreamMakers
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-navy-100">
             Estate developments, allocation days and the people behind them —
@@ -54,7 +54,7 @@ export function OurStory() {
               From the Managing Director
             </p>
             <p className="mt-2 font-display text-lg text-white">
-              &ldquo;We started DreamMaker because too many people paid for land in Lagos and Ogun
+              &ldquo;We started DreamMakers because too many people paid for land in Lagos and Ogun
               they could never build on — no title, no allocation, and no one to call when it went
               wrong. Every estate we sell now starts with a documented title, not a promise, and
               it&apos;s backed by a team you can walk into our Lakowe office and meet. That

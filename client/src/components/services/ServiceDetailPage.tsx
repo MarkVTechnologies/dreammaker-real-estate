@@ -51,7 +51,7 @@ export function ServiceDetailPage({ service }: { service: Service }) {
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
             <WhatsAppLink
-              message={`Hi DreamMaker, I'd like to know more about ${service.label.toLowerCase()}.`}
+              message={`Hi DreamMakers, I'd like to know more about ${service.label.toLowerCase()}.`}
               className="inline-flex items-center gap-2 rounded-md border border-white/20 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
             >
               Chat on WhatsApp
@@ -192,7 +192,7 @@ export function ServiceDetailPage({ service }: { service: Service }) {
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
               <WhatsAppLink
-                message={`Hi DreamMaker, I'd like to know more about ${service.label.toLowerCase()}.`}
+                message={`Hi DreamMakers, I'd like to know more about ${service.label.toLowerCase()}.`}
                 className="inline-flex items-center gap-2 rounded-md border border-white/20 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
               >
                 Chat on WhatsApp

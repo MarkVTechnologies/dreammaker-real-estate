@@ -4,8 +4,8 @@ import { WhatsAppLink } from "@/components/layout/WhatsAppLink";
 import { nap } from "@/lib/nav";
 
 export const metadata = {
-  title: "Contact DreamMaker Real Estate",
-  description: "Contact DreamMaker Real Estate Ltd — phone, WhatsApp, email, and our office address.",
+  title: "Contact DreamMakers Real Estate",
+  description: "Contact DreamMakers Real Estate Ltd — phone, WhatsApp, email, and our office address.",
 };
 
 export default function ContactPage() {
@@ -47,7 +47,7 @@ export default function ContactPage() {
         </div>
 
         <WhatsAppLink
-          message="Hi DreamMaker, I'd like to get in touch."
+          message="Hi DreamMakers, I'd like to get in touch."
           className="mt-10 inline-flex items-center gap-2 rounded-md bg-whatsapp px-6 py-3 font-semibold text-white transition-colors hover:bg-whatsapp/90"
         >
           Chat on WhatsApp

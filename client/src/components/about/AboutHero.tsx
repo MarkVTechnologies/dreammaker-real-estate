@@ -22,13 +22,13 @@ export function AboutHero() {
         <Reveal>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-gold-500">
             <ShieldCheck className="h-3.5 w-3.5" aria-hidden="true" />
-            About DreamMaker Real Estate Ltd
+            About DreamMakers Real Estate Ltd
           </span>
           <h1 className="mx-auto mt-6 max-w-3xl font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
             Building trust, one titled acre at a time.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-navy-100">
-            DreamMaker Real Estate Ltd develops and delivers verified land and homes across
+            DreamMakers Real Estate Ltd develops and delivers verified land and homes across
             Lagos and Ogun&apos;s fastest-growing corridors — with a real office, named
             leadership, and titles you can bank on.
           </p>

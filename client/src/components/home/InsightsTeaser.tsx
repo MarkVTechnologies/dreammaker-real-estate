@@ -6,8 +6,8 @@ import { getAllPosts } from "@/lib/db/posts";
 
 /**
  * PRD §8.1 module 11 — kept as its own light band (Kemchuta has no direct
- * equivalent; this is DreamMaker's differentiator per PRD §3.1 "no visible
- * blog or content layer — this is where DreamMaker overtakes them").
+ * equivalent; this is DreamMakers' differentiator per PRD §3.1 "no visible
+ * blog or content layer — this is where DreamMakers overtakes them").
  */
 export async function InsightsTeaser() {
   const allPosts = await getAllPosts();

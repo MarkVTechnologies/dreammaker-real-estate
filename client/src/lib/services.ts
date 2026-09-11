@@ -67,7 +67,7 @@ export const services: Service[] = [
         a: "No — every estate we develop is on land we've verified and, where required, fully documented before it's listed for sale.",
       },
       {
-        q: "How is a DreamMaker estate different from a plain land sale?",
+        q: "How is a DreamMakers estate different from a plain land sale?",
         a: "We plan roads, drainage and allocation up front. Buyers are getting a laid-out estate, not just a fenced coordinate on a map.",
       },
     ],
@@ -78,9 +78,9 @@ export const services: Service[] = [
     label: "Construction management",
     href: "/services/construction-management",
     icon: HardHat,
-    copy: "Oversight of build quality, timelines and budget on every DreamMaker site.",
+    copy: "Oversight of build quality, timelines and budget on every DreamMakers site.",
     description:
-      "Every DreamMaker site is supervised by an in-house construction team, not a subcontractor left unchecked. We manage contractors, materials and site safety against a fixed schedule, with progress logged and shared — not just promised.",
+      "Every DreamMakers site is supervised by an in-house construction team, not a subcontractor left unchecked. We manage contractors, materials and site safety against a fixed schedule, with progress logged and shared — not just promised.",
     included: [
       "Contractor sourcing and supervision",
       "Quality control and materials verification",
@@ -244,7 +244,7 @@ export const services: Service[] = [
       },
       {
         q: "Can you perfect title on land I already own?",
-        a: "Yes — this service isn't limited to DreamMaker estates. We take on title regularization independently.",
+        a: "Yes — this service isn't limited to DreamMakers estates. We take on title regularization independently.",
       },
     ],
   },

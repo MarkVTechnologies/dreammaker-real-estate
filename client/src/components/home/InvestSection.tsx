@@ -23,7 +23,7 @@ export function InvestSection() {
         <Reveal>
           <p className="text-sm font-semibold uppercase tracking-wide text-gold-600">Invest</p>
           <h2 className="mt-2 font-display text-3xl font-bold text-navy-900 sm:text-4xl">
-            Invest with DreamMaker
+            Invest with DreamMakers
           </h2>
           <p className="mt-3 max-w-xl text-ink-600">
             Three ways to put capital into the Lekki–Epe corridor — see a

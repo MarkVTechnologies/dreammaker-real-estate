@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const label = localityLabel[locality];
   return {
     title: `Land for Sale in ${label} — Prices & Available Plots`,
-    description: `Current price band, DreamMaker inventory, title landscape and FAQ for land in ${label}, Lagos.`,
+    description: `Current price band, DreamMakers inventory, title landscape and FAQ for land in ${label}, Lagos.`,
   };
 }
 

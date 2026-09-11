@@ -5,8 +5,8 @@ import { WhatsAppLink } from "@/components/layout/WhatsAppLink";
 import { nap } from "@/lib/nav";
 
 export const metadata = {
-  title: "DreamMaker Lakowe Office — Address & Directions",
-  description: "DreamMaker Real Estate Ltd's Lakowe office — address, phone, email and directions.",
+  title: "DreamMakers Lakowe Office — Address & Directions",
+  description: "DreamMakers Real Estate Ltd's Lakowe office — address, phone, email and directions.",
 };
 
 export default function LakoweOfficePage() {
@@ -53,7 +53,7 @@ export default function LakoweOfficePage() {
         </div>
 
         <WhatsAppLink
-          message="Hi DreamMaker, I'd like to visit the Lakowe office."
+          message="Hi DreamMakers, I'd like to visit the Lakowe office."
           className="mt-10 inline-flex items-center gap-2 rounded-md bg-whatsapp px-6 py-3 font-semibold text-white transition-colors hover:bg-whatsapp/90"
         >
           Chat on WhatsApp

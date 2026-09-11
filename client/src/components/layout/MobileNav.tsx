@@ -116,7 +116,7 @@ export function MobileNav() {
 
                   <div className="space-y-3 border-t border-navy-100 px-5 py-6">
                     <WhatsAppLink
-                      message="Hi DreamMaker, I'd like to know more about your estates."
+                      message="Hi DreamMakers, I'd like to know more about your estates."
                       className="flex items-center justify-center gap-2 rounded-md border border-whatsapp px-4 py-3 text-sm font-semibold text-whatsapp"
                       onClick={close}
                     >

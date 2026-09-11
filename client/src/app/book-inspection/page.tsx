@@ -3,7 +3,7 @@ import { InspectionForm } from "@/components/estate/InspectionForm";
 
 export const metadata = {
   title: "Book an Inspection",
-  description: "Book a physical inspection of any DreamMaker estate — we respond within 2 hours, 8am–8pm WAT.",
+  description: "Book a physical inspection of any DreamMakers estate — we respond within 2 hours, 8am–8pm WAT.",
 };
 
 export default function BookInspectionPage() {
