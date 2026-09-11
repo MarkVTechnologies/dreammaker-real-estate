@@ -18,9 +18,9 @@ export function Footer() {
             <Image
               src="/logo/dreammakers-lockup-white.svg"
               alt="DreamMakers Real Estate"
-              width={164}
-              height={40}
-              className="h-10 w-auto"
+              width={189}
+              height={46}
+              className="h-[46px] w-auto"
             />
             <p className="mt-3 max-w-[22ch] text-sm text-navy-100">
               Building on the Lekki–Epe corridor since day one.
