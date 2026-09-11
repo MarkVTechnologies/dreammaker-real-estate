@@ -23,11 +23,24 @@ import { WhyChooseUs } from "./WhyChooseUs";
 /** Hero shows only these two estates, in this order — not the full live inventory. */
 const HERO_SLUGS = ["add-cocoa-farm-estate", "metaland-estate"];
 
+/**
+ * Hero-only image overrides, keyed by slug — a wide crop suited to the hero's
+ * banner aspect ratio, distinct from each estate's `coverImageUrl` (gallery[0])
+ * which stays untouched for use on project cards elsewhere.
+ */
+const HERO_IMAGE_OVERRIDES: Record<string, string> = {
+  "add-cocoa-farm-estate": "/images/estates/add-cocoa-farm/hero-banner.jpg",
+};
+
 export async function HomeView() {
   const estates = await listEstateSummaries();
   const heroEstates = [...estates]
     .filter((estate) => HERO_SLUGS.includes(estate.slug))
-    .sort((a, b) => HERO_SLUGS.indexOf(a.slug) - HERO_SLUGS.indexOf(b.slug));
+    .sort((a, b) => HERO_SLUGS.indexOf(a.slug) - HERO_SLUGS.indexOf(b.slug))
+    .map((estate) => ({
+      ...estate,
+      coverImageUrl: HERO_IMAGE_OVERRIDES[estate.slug] ?? estate.coverImageUrl,
+    }));
 
   return (
     <>
