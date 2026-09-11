@@ -14,9 +14,9 @@ export function Header() {
           <Image
             src="/logo/dreammakers-lockup-navy.svg"
             alt="DreamMakers Real Estate"
-            width={168}
-            height={41}
-            className="h-[41px] w-auto"
+            width={202}
+            height={49}
+            className="h-[49px] w-auto"
           />
         </Link>
 
