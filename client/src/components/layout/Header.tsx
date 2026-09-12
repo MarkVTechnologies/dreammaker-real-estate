@@ -12,9 +12,9 @@ export function Header() {
       <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo/dreammakers-lockup-navy.svg"
+            src="/logo/dreammakers-lockup-navy.png"
             alt="DreamMakers Real Estate"
-            width={283}
+            width={374}
             height={69}
             className="h-[69px] w-auto"
           />

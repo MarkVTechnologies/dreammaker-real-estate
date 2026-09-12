@@ -16,9 +16,9 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-6">
           <div className="col-span-2 lg:col-span-1">
             <Image
-              src="/logo/dreammakers-lockup-white.svg"
+              src="/logo/dreammakers-lockup-white.png"
               alt="DreamMakers Real Estate"
-              width={318}
+              width={417}
               height={77}
               className="h-[77px] w-auto"
             />
