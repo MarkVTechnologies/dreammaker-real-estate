@@ -21,8 +21,8 @@ import { WhyChooseUs } from "./WhyChooseUs";
  * Every PRD §8.1 homepage module is still present; several are combined or
  * reordered for tighter narrative flow rather than dropped.
  */
-/** Hero shows only these two estates, in this order — not the full live inventory. */
-const HERO_SLUGS = ["add-cocoa-farm-estate", "metaland-estate"];
+/** Hero shows only these estates, in this order — not the full live inventory. */
+const HERO_SLUGS = ["add-cocoa-farm-estate", "metaland-estate", "epe-club-estate"];
 
 export async function HomeView() {
   const estates = await listEstateSummaries();

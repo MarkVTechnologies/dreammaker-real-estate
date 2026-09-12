@@ -8,6 +8,7 @@ import type { EstateSummary } from "@/lib/types";
 export const HERO_BANNER_OVERRIDES: Record<string, string> = {
   "add-cocoa-farm-estate": "/images/estates/add-cocoa-farm/hero-banner.jpg",
   "metaland-estate": "/images/estates/metaland-estate/hero-banner.jpg",
+  "epe-club-estate": "/images/estates/epe-club-estate/hero-banner.jpg",
 };
 
 export function withHeroBannerCovers(estates: EstateSummary[]): EstateSummary[] {
