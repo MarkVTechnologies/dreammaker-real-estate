@@ -2,6 +2,7 @@ import { Building2 } from "lucide-react";
 import { EstateCard } from "@/components/estate/EstateCard";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { listEstateSummaries } from "@/lib/db/estates";
+import { withHeroBannerCovers } from "@/lib/estateHeroImages";
 import { excludeFromPublicListings } from "@/lib/estateVisibility";
 
 // Never cached: estates are edited live via /admin.
@@ -14,7 +15,7 @@ export const metadata = {
 };
 
 export default async function ProjectsIndexPage() {
-  const estates = excludeFromPublicListings(await listEstateSummaries());
+  const estates = withHeroBannerCovers(excludeFromPublicListings(await listEstateSummaries()));
 
   return (
     <div className="relative overflow-hidden">
@@ -31,7 +32,7 @@ export default async function ProjectsIndexPage() {
         </Reveal>
 
         {estates.length > 0 ? (
-          <RevealGroup className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <RevealGroup className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {estates.map((estate) => (
               <RevealItem key={estate.slug}>
                 <EstateCard estate={estate} />

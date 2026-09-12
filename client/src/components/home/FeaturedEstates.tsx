@@ -4,6 +4,7 @@ import { EstateCard } from "@/components/estate/EstateCard";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { TrustChips } from "./TrustChips";
 import { listEstateSummaries } from "@/lib/db/estates";
+import { withHeroBannerCovers } from "@/lib/estateHeroImages";
 import { excludeFromPublicListings } from "@/lib/estateVisibility";
 
 // PRD §3.1 names this exact chip set as the row to keep from
@@ -21,7 +22,7 @@ const estateTrustChips = [
  * all" link, then a trust chip row directly under the grid (PRD §3.1).
  */
 export async function FeaturedEstates() {
-  const featuredEstates = excludeFromPublicListings(await listEstateSummaries());
+  const featuredEstates = withHeroBannerCovers(excludeFromPublicListings(await listEstateSummaries()));
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
@@ -78,7 +79,7 @@ export async function FeaturedEstates() {
       </Reveal>
 
       {featuredEstates.length > 0 ? (
-        <RevealGroup className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <RevealGroup className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featuredEstates.map((estate) => (
             <RevealItem key={estate.slug}>
               <EstateCard estate={estate} />
