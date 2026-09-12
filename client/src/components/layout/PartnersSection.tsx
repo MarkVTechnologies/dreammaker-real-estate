@@ -11,6 +11,7 @@ const partners = [
   { name: "Andremeks Company", logo: "/images/partners/andremeks-company.jpg" },
   { name: "PW Craft Homes", logo: "/images/partners/pw-craft-homes.jpg" },
   { name: "Mafic Palazzo Ventures", logo: "/images/partners/mafic-palazzo-ventures.jpg" },
+  { name: "Platinum Cape Realtor Group", logo: "/images/partners/platinum-cape-realtor-group.svg" },
 ];
 
 /** Site-wide partner strip — rendered once in the root layout, directly above the footer, on every route. */
@@ -29,16 +30,16 @@ export function PartnersSection() {
           </p>
         </Reveal>
 
-        <RevealGroup className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
+        <RevealGroup className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
           {partners.map((partner) => (
             <RevealItem key={partner.name}>
-              <div className="flex h-28 items-center justify-center rounded-xl border border-navy-100 bg-white p-5 grayscale transition-all duration-300 hover:grayscale-0 hover:shadow-md hover:shadow-navy-950/5">
+              <div className="flex h-40 items-center justify-center rounded-xl border border-navy-100 bg-white p-6 transition-shadow duration-300 hover:shadow-md hover:shadow-navy-950/5">
                 <div className="relative h-full w-full">
                   <Image
                     src={partner.logo}
                     alt={partner.name}
                     fill
-                    sizes="(min-width: 1024px) 160px, 33vw"
+                    sizes="(min-width: 1024px) 220px, 40vw"
                     className="object-contain"
                   />
                 </div>
