@@ -30,6 +30,7 @@ const HERO_SLUGS = ["add-cocoa-farm-estate", "metaland-estate"];
  */
 const HERO_IMAGE_OVERRIDES: Record<string, string> = {
   "add-cocoa-farm-estate": "/images/estates/add-cocoa-farm/hero-banner.jpg",
+  "metaland-estate": "/images/estates/metaland-estate/hero-banner.jpg",
 };
 
 export async function HomeView() {
