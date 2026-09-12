@@ -2,22 +2,22 @@ import { Reveal } from "@/components/ui/Reveal";
 
 const milestones = [
   {
-    year: "2015",
+    year: "2021",
     title: "DreamMakers is founded",
     description: "Started with a single plot on the Lekki–Epe corridor and a small sales team.",
   },
   {
-    year: "2018",
+    year: "2022",
     title: "First estate handed over",
     description: "Completed our first full estate delivery: survey, fencing, and allocation letters issued to every buyer.",
   },
   {
-    year: "2021",
+    year: "2023",
     title: "Expansion into Ogun State",
     description: "Opened new development sites along the Epe/Ijebu-Ode corridor as demand grew beyond Lagos.",
   },
   {
-    year: "2024",
+    year: "2025",
     title: "Realtor network launched",
     description: "Opened DreamMakers' referral program, giving independent realtors a transparent commission pipeline.",
   },

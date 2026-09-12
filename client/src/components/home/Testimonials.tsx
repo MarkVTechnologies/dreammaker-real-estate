@@ -5,14 +5,14 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 const testimonials = [
   {
     quote:
-      "In 2015, Dream Makers helped me build a three storey building with nine flats in Asaba, Delta State. In 2018 I traveled to Germany and handed the property over to Dream Makers Investments and ever since then they have managed it very well — I have no complaints from my tenants and I constantly receive the rent money over here without stress. They are the best in construction and property management in the whole of Nigeria!!",
+      "In 2021, Dream Makers helped me build a three storey building with nine flats in Asaba, Delta State. In 2023 I traveled to Germany and handed the property over to Dream Makers Investments and ever since then they have managed it very well — I have no complaints from my tenants and I constantly receive the rent money over here without stress. They are the best in construction and property management in the whole of Nigeria!!",
     name: "Esther Ojibade",
     title: "Interior Designer",
     photo: "/images/testimonials/esther-ojibade.jpg",
   },
   {
     quote:
-      "In 2015, Dream Makers helped me build a three storey building with nine flats in Asaba, Delta State. In 2018 I traveled to Germany and handed the property over to Dream Makers Investments and ever since then they have managed it very well — I have no complaints from my tenants and I constantly receive the rent money over here without stress. They are the best in construction and property management in the whole of Nigeria!!",
+      "In 2021, Dream Makers helped me build a three storey building with nine flats in Asaba, Delta State. In 2023 I traveled to Germany and handed the property over to Dream Makers Investments and ever since then they have managed it very well — I have no complaints from my tenants and I constantly receive the rent money over here without stress. They are the best in construction and property management in the whole of Nigeria!!",
     name: "Barr. John Onome",
     title: "Lawyer",
     photo: "/images/testimonials/john-onome.jpg",

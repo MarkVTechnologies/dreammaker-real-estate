@@ -4,7 +4,7 @@ const items = [
   { icon: BadgeCheck, label: "CAC Registered" },
   { icon: ShieldCheck, label: "Verified Titles" },
   { icon: MapPin, label: "Physical Office, Lakowe" },
-  { icon: Clock, label: "Est. 2015" },
+  { icon: Clock, label: "Est. 2021" },
 ];
 
 /** PRD §8.1 module 2 — text, not images. */
