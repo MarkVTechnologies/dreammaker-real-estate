@@ -7,17 +7,17 @@ const pillars = [
   {
     pillar: "Verified",
     icon: ShieldCheck,
-    copy: "Every title documented and shown — a document viewer on each estate page, not a claim on a brochure.",
+    copy: "Every title documented and shown, with a document viewer on each estate page, not a claim on a brochure.",
   },
   {
     pillar: "Built",
     icon: Building2,
-    copy: "We develop and construct, not just market — a project portfolio and a construction progress log back every estate.",
+    copy: "We develop and construct, not just market: a project portfolio and a construction progress log back every estate.",
   },
   {
     pillar: "Accountable",
     icon: BadgeCheck,
-    copy: "Named leadership, a physical office, and a press record — all linked, not just asserted.",
+    copy: "Named leadership, a physical office, and a press record, all linked, not just asserted.",
   },
 ];
 

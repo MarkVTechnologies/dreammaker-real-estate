@@ -9,7 +9,7 @@ const milestones = [
   {
     year: "2018",
     title: "First estate handed over",
-    description: "Completed our first full estate delivery — survey, fencing, and allocation letters issued to every buyer.",
+    description: "Completed our first full estate delivery: survey, fencing, and allocation letters issued to every buyer.",
   },
   {
     year: "2021",

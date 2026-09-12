@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!estate) return { title: "Project not found" };
 
   return {
-    title: estate.seoTitle ?? `${estate.name} — ${estate.locality}, ${estate.lga}`,
+    title: estate.seoTitle ?? `${estate.name}, ${estate.locality}, ${estate.lga}`,
     description:
       estate.seoDescription ??
       `Title status, pricing, and location details for ${estate.name} in ${estate.locality}, ${estate.lga}.`,

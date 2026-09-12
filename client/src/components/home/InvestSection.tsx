@@ -26,7 +26,7 @@ export function InvestSection() {
             Invest with DreamMakers
           </h2>
           <p className="mt-3 max-w-xl text-ink-600">
-            Three ways to put capital into the Lekki–Epe corridor — see a
+            Three ways to put capital into the Lekki–Epe corridor. See a
             projection for yourself below.
           </p>
         </Reveal>

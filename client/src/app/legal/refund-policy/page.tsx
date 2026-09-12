@@ -1,7 +1,7 @@
 import { nap } from "@/lib/nav";
 
 export const metadata = {
-  title: "Refund Policy — DreamMakers Real Estate",
+  title: "Refund Policy: DreamMakers Real Estate",
   description: "DreamMakers Real Estate Ltd refund policy for deposits and instalments.",
 };
 
@@ -16,8 +16,8 @@ export default function RefundPolicyPage() {
           <h2 className="font-display text-xl font-semibold text-navy-900">1. Deposits and reservations</h2>
           <p className="mt-2">
             A deposit or reservation payment reserves a specific plot or unit for you while the
-            rest of the purchase is completed. The exact terms of your deposit — including
-            whether and how it can be refunded — are set out in your sale agreement.
+            rest of the purchase is completed. The exact terms of your deposit, including
+            whether and how it can be refunded, are set out in your sale agreement.
           </p>
         </section>
 

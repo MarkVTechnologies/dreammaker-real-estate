@@ -2,9 +2,9 @@ import { Globe } from "lucide-react";
 import { InspectionForm } from "@/components/estate/InspectionForm";
 
 export const metadata = {
-  title: "Book a Virtual Inspection — For Diaspora Buyers",
+  title: "Book a Virtual Inspection: For Diaspora Buyers",
   description:
-    "Book a virtual inspection with timezone selection — built for diaspora buyers who cannot inspect physically.",
+    "Book a virtual inspection with timezone selection, built for diaspora buyers who cannot inspect physically.",
 };
 
 export default function VirtualInspectionPage() {

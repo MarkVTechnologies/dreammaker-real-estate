@@ -57,7 +57,7 @@ export function InspectionForm({ variant, estateId, estateName }: InspectionForm
       >
         <CheckCircle2 className="h-5 w-5 shrink-0 text-success" aria-hidden="true" />
         <p className="text-sm text-navy-900">
-          Thanks — we respond within 2 hours, 8am–8pm WAT.
+          Thanks! We respond within 2 hours, 8am–8pm WAT.
         </p>
       </motion.div>
     );

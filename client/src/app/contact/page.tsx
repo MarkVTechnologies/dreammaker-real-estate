@@ -5,7 +5,7 @@ import { nap } from "@/lib/nav";
 
 export const metadata = {
   title: "Contact DreamMakers Real Estate",
-  description: "Contact DreamMakers Real Estate Ltd — phone, WhatsApp, email, and our office address.",
+  description: "Contact DreamMakers Real Estate Ltd: phone, WhatsApp, email, and our office address.",
 };
 
 export default function ContactPage() {

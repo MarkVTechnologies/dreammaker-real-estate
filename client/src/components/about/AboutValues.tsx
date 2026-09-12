@@ -6,7 +6,7 @@ const values = [
     icon: ShieldCheck,
     title: "Verified titles, always",
     description:
-      "Every estate we sell carries a documented, verifiable title — C of O, Governor's Consent, or registered survey — checked before it ever reaches a listing page.",
+      "Every estate we sell carries a documented, verifiable title (C of O, Governor's Consent, or registered survey) checked before it ever reaches a listing page.",
   },
   {
     icon: Eye,
@@ -24,7 +24,7 @@ const values = [
     icon: Target,
     title: "Long-term relationships",
     description:
-      "Most of our new buyers arrive through referrals from existing ones. We build estates — and a reputation — meant to outlast a single sale.",
+      "Most of our new buyers arrive through referrals from existing ones. We build estates, and a reputation, meant to outlast a single sale.",
   },
 ];
 

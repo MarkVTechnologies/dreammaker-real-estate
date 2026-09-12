@@ -2,7 +2,7 @@ import Link from "next/link";
 import { PageStub } from "@/components/ui/PageStub";
 
 export const metadata = {
-  title: "Become a DreamMakers Realtor — Commission Structure & Signup",
+  title: "Become a DreamMakers Realtor: Commission Structure & Signup",
   description:
     "Join DreamMakers' realtor network: commission structure, payout terms, marketing assets and referral tracking.",
 };

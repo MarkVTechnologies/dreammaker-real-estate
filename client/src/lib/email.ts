@@ -14,7 +14,7 @@ export async function sendLeadNotification(lead: LeadDoc) {
   await resend.emails.send({
     from: process.env.EMAIL_FROM ?? "DreamMakers Real Estate <no-reply@dreammaker.com.ng>",
     to: process.env.LEADS_INBOX_EMAIL ?? "leads@dreammaker.com.ng",
-    subject: `New ${lead.type.toLowerCase().replace("_", " ")} lead — ${lead.name}`,
+    subject: `New ${lead.type.toLowerCase().replace("_", " ")} lead from ${lead.name}`,
     text: [
       `Name: ${lead.name}`,
       `Phone: ${lead.phone}`,

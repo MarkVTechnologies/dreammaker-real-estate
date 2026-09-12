@@ -8,8 +8,8 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locality } = await params;
   return {
-    title: `Homes for Sale in ${locality} — Built Units`,
-    description: `Finished and off-plan homes for sale in ${locality}, Lagos — pricing, floor size and rooms.`,
+    title: `Homes for Sale in ${locality}: Built Units`,
+    description: `Finished and off-plan homes for sale in ${locality}, Lagos, with pricing, floor size and rooms.`,
   };
 }
 
@@ -18,7 +18,7 @@ export default async function HomesForSaleLocalityPage({ params }: Props) {
   return (
     <PageStub
       title={`Homes for sale in ${locality}`}
-      intro={`Homes for sale in ${locality} — pricing, available units and neighbourhood details are coming soon.`}
+      intro={`Homes for sale in ${locality}. Pricing, available units and neighbourhood details are coming soon.`}
     />
   );
 }

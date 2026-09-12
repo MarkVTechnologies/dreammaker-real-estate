@@ -8,9 +8,9 @@ import { excludeFromPublicListings } from "@/lib/estateVisibility";
 export const dynamic = "force-dynamic";
 
 export const metadata = {
-  title: "Our Projects — Estates for Sale in Lagos & Ogun",
+  title: "Our Projects: Estates for Sale in Lagos & Ogun",
   description:
-    "Browse DreamMakers' project portfolio — title status, starting price, deposit and plot size on every listing.",
+    "Browse DreamMakers' project portfolio, with title status, starting price, deposit and plot size on every listing.",
 };
 
 export default async function ProjectsIndexPage() {
@@ -25,7 +25,7 @@ export default async function ProjectsIndexPage() {
             Our projects
           </h1>
           <p className="mt-4 max-w-xl text-lg text-ink-600">
-            Every estate we develop and market — verified titles, documented allocations, and
+            Every estate we develop and market, with verified titles, documented allocations, and
             transparent pricing on every listing.
           </p>
         </Reveal>
@@ -42,7 +42,7 @@ export default async function ProjectsIndexPage() {
           <Reveal delay={0.1}>
             <div className="mt-10 flex flex-col items-center gap-3 rounded-xl border border-dashed border-ink-300 bg-navy-50 px-6 py-16 text-center">
               <Building2 className="h-8 w-8 text-navy-400" aria-hidden="true" strokeWidth={1.5} />
-              <p className="text-sm text-ink-600">No projects listed yet — check back soon.</p>
+              <p className="text-sm text-ink-600">No projects listed yet. Check back soon.</p>
             </div>
           </Reveal>
         )}

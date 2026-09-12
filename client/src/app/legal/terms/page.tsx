@@ -1,7 +1,7 @@
 import { nap } from "@/lib/nav";
 
 export const metadata = {
-  title: "Terms of Service — DreamMakers Real Estate",
+  title: "Terms of Service: DreamMakers Real Estate",
   description: "DreamMakers Real Estate Ltd terms of service.",
 };
 
@@ -25,7 +25,7 @@ export default function TermsPage() {
           <p className="mt-2">
             We take care to keep property information, pricing and availability on this site
             accurate and up to date, but prices, plot sizes and availability can change without
-            notice. Nothing on this website constitutes a binding offer to sell — a sale is only
+            notice. Nothing on this website constitutes a binding offer to sell; a sale is only
             finalized once a formal sale agreement is signed by both parties.
           </p>
         </section>
@@ -43,7 +43,7 @@ export default function TermsPage() {
           <h2 className="font-display text-xl font-semibold text-navy-900">4. Payments</h2>
           <p className="mt-2">
             Where this site allows you to make a deposit or instalment payment, the specific
-            terms of that payment — including amount, schedule and what it secures — are set out
+            terms of that payment, including amount, schedule and what it secures, are set out
             in your sale agreement, not on this website.
           </p>
         </section>
@@ -51,7 +51,7 @@ export default function TermsPage() {
         <section>
           <h2 className="font-display text-xl font-semibold text-navy-900">5. Intellectual property</h2>
           <p className="mt-2">
-            All content on this site — text, photos, logos and layouts — belongs to{" "}
+            All content on this site, including text, photos, logos and layouts, belongs to{" "}
             {nap.legalName} or its licensors and may not be reproduced without permission.
           </p>
         </section>

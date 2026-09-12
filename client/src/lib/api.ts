@@ -20,7 +20,7 @@ export async function createLead(input: CreateLeadInput): Promise<{ id: string }
 
   if (!res.ok) {
     const body = await res.json().catch(() => ({}));
-    throw new Error(body.error ?? "Failed to submit — please try again.");
+    throw new Error(body.error ?? "Failed to submit. Please try again.");
   }
 
   return res.json();

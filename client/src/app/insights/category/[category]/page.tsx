@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!label) return { title: "Category not found" };
 
   return {
-    title: `${label} — DreamMakers Insights`,
+    title: `${label}: DreamMakers Insights`,
     description: `DreamMakers insights posts in the ${label} category.`,
   };
 }
@@ -59,7 +59,7 @@ export default async function InsightsCategoryPage({ params }: Props) {
           <Reveal delay={0.1}>
             <div className="mt-10 flex flex-col items-center gap-3 rounded-xl border border-dashed border-ink-300 bg-navy-50 px-6 py-16 text-center">
               <FileText className="h-8 w-8 text-navy-400" aria-hidden="true" strokeWidth={1.5} />
-              <p className="text-sm text-ink-600">No posts in this category yet — check back soon.</p>
+              <p className="text-sm text-ink-600">No posts in this category yet. Check back soon.</p>
             </div>
           </Reveal>
         )}

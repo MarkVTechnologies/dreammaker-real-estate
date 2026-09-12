@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!isLocality(locality)) return {};
   const label = localityLabel[locality];
   return {
-    title: `Land for Sale in ${label} — Prices & Available Plots`,
+    title: `Land for Sale in ${label}: Prices & Available Plots`,
     description: `Current price band, DreamMakers inventory, title landscape and FAQ for land in ${label}, Lagos.`,
   };
 }
@@ -46,7 +46,7 @@ export default async function LandForSaleLocalityPage({ params }: Props) {
   return (
     <PageStub
       title={`Land for sale in ${label}`}
-      intro={`Land for sale in ${label} — current pricing, available plots and title information are being finalized for this page.`}
+      intro={`Land for sale in ${label}. Current pricing, available plots and title information are being finalized for this page.`}
     />
   );
 }

@@ -2,7 +2,7 @@ import { ServiceDetailPage } from "@/components/services/ServiceDetailPage";
 import { services } from "@/lib/services";
 
 export const metadata = {
-  title: "Land Title Perfection Services — Lagos",
+  title: "Land Title Perfection Services: Lagos",
   description:
     "Title perfection services: C of O, Excision, Gazette and Governor's Consent processing and regularization in Lagos.",
 };

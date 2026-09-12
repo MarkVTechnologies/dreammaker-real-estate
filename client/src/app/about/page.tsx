@@ -12,7 +12,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export const metadata = {
   title: "About DreamMakers Real Estate Ltd",
   description:
-    "DreamMakers Real Estate Ltd — a Lagos developer on the Lekki–Epe corridor with a physical office, real construction delivery and named leadership.",
+    "DreamMakers Real Estate Ltd is a Lagos developer on the Lekki–Epe corridor with a physical office, real construction delivery and named leadership.",
 };
 
 export default function AboutPage() {
@@ -32,7 +32,7 @@ export default function AboutPage() {
               Ready to see it for yourself?
             </h2>
             <p className="mt-4 text-navy-100">
-              Book a physical inspection or chat with our team on WhatsApp — no pressure, just a
+              Book a physical inspection or chat with our team on WhatsApp. No pressure, just a
               straight answer about titles, pricing and availability.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

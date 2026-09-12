@@ -18,7 +18,7 @@ export function AboutOffices() {
             A real office, open doors
           </h2>
           <p className="mt-4 text-lg text-ink-600">
-            No pop-up shops — walk in for a face-to-face conversation about any estate.
+            No pop-up shops. Walk in for a face-to-face conversation about any estate.
           </p>
         </Reveal>
 

@@ -30,7 +30,7 @@ export default async function LocationGuidePage({ params }: Props) {
   return (
     <PageStub
       title={`${locality} area guide`}
-      intro="A local area guide for this location — infrastructure, amenities and what it's like to live or invest here. Coming soon."
+      intro="A local area guide for this location, covering infrastructure, amenities and what it's like to live or invest here. Coming soon."
     />
   );
 }

@@ -36,7 +36,7 @@ export const services: Service[] = [
     icon: Building2,
     copy: "Land acquisition, planning and estate development across the Lekki–Epe corridor.",
     description:
-      "We identify, acquire and plan land across the Lekki–Epe and Ogun corridors, then take it from raw plot to a fully laid-out estate — survey, layout design, government approvals and infrastructure planning handled in-house before a single unit goes on sale.",
+      "We identify, acquire and plan land across the Lekki–Epe and Ogun corridors, then take it from raw plot to a fully laid-out estate: survey, layout design, government approvals and infrastructure planning handled in-house before a single unit goes on sale.",
     included: [
       "Land acquisition and due diligence",
       "Estate layout and infrastructure planning",
@@ -46,7 +46,7 @@ export const services: Service[] = [
     process: [
       {
         title: "Site identification & due diligence",
-        description: "Title, survey and land use are verified before we commit to acquiring a site — not after.",
+        description: "Title, survey and land use are verified before we commit to acquiring a site, not after.",
       },
       {
         title: "Layout & infrastructure planning",
@@ -64,7 +64,7 @@ export const services: Service[] = [
     faqs: [
       {
         q: "Do you build on land you don't legally control yet?",
-        a: "No — every estate we develop is on land we've verified and, where required, fully documented before it's listed for sale.",
+        a: "No. Every estate we develop is on land we've verified and, where required, fully documented before it's listed for sale.",
       },
       {
         q: "How is a DreamMakers estate different from a plain land sale?",
@@ -80,7 +80,7 @@ export const services: Service[] = [
     icon: HardHat,
     copy: "Oversight of build quality, timelines and budget on every DreamMakers site.",
     description:
-      "Every DreamMakers site is supervised by an in-house construction team, not a subcontractor left unchecked. We manage contractors, materials and site safety against a fixed schedule, with progress logged and shared — not just promised.",
+      "Every DreamMakers site is supervised by an in-house construction team, not a subcontractor left unchecked. We manage contractors, materials and site safety against a fixed schedule, with progress logged and shared, not just promised.",
     included: [
       "Contractor sourcing and supervision",
       "Quality control and materials verification",
@@ -108,11 +108,11 @@ export const services: Service[] = [
     faqs: [
       {
         q: "Do you use your own contractors or hire out?",
-        a: "We source and manage contractors directly, and supervise on-site ourselves — oversight doesn't stop once a contract is signed.",
+        a: "We source and manage contractors directly, and supervise on-site ourselves; oversight doesn't stop once a contract is signed.",
       },
       {
         q: "What happens if a project falls behind schedule?",
-        a: "We say so, in writing, with a revised date — not after buyers start asking what happened.",
+        a: "We say so, in writing, with a revised date, not after buyers start asking what happened.",
       },
     ],
   },
@@ -124,7 +124,7 @@ export const services: Service[] = [
     icon: ClipboardList,
     copy: "Coordinated delivery from groundbreaking to allocation, phase by phase.",
     description:
-      "From groundbreaking to allocation day, one team owns the timeline end-to-end — coordinating land development, construction, documentation and buyer communication so nothing falls through the cracks between departments.",
+      "From groundbreaking to allocation day, one team owns the timeline end-to-end, coordinating land development, construction, documentation and buyer communication so nothing falls through the cracks between departments.",
     included: [
       "Single point of accountability per project",
       "Milestone tracking and buyer updates",
@@ -152,7 +152,7 @@ export const services: Service[] = [
     faqs: [
       {
         q: "Who do I talk to if something's unclear mid-project?",
-        a: "One project lead owns your estate end-to-end — you're not routed between departments to get an answer.",
+        a: "One project lead owns your estate end-to-end; you're not routed between departments to get an answer.",
       },
       {
         q: "How do you handle delays between teams?",
@@ -168,7 +168,7 @@ export const services: Service[] = [
     icon: KeyRound,
     copy: "Ongoing upkeep and administration for delivered estates and occupied plots.",
     description:
-      "Delivery doesn't end at allocation. We maintain common infrastructure — access roads, drainage, security and waste management — on our completed estates, and handle administrative support for owners who aren't resident on-site.",
+      "Delivery doesn't end at allocation. We maintain common infrastructure (access roads, drainage, security and waste management) on our completed estates, and handle administrative support for owners who aren't resident on-site.",
     included: [
       "Estate infrastructure maintenance",
       "Security and access management",
@@ -190,12 +190,12 @@ export const services: Service[] = [
       },
       {
         title: "Service charge accounting",
-        description: "Costs are tracked and reported transparently — not billed as an unexplained lump sum.",
+        description: "Costs are tracked and reported transparently, not billed as an unexplained lump sum.",
       },
     ],
     faqs: [
       {
-        q: "I don't live near my plot — who looks after it?",
+        q: "Who looks after my plot if I don't live nearby?",
         a: "Our property management team maintains shared estate infrastructure and can support your individual plot directly.",
       },
       {
@@ -212,7 +212,7 @@ export const services: Service[] = [
     icon: FileCheck,
     copy: "Documentation and regularization of C of O, Excision, Gazette and Governor's Consent titles.",
     description:
-      "Title is the single biggest fear in Nigerian real estate, so we handle it directly rather than outsourcing it to a buyer's own lawyer after the fact — processing and regularizing C of O, Excision, Gazette and Governor's Consent documentation in-house.",
+      "Title is the single biggest fear in Nigerian real estate, so we handle it directly rather than outsourcing it to a buyer's own lawyer after the fact: processing and regularizing C of O, Excision, Gazette and Governor's Consent documentation in-house.",
     included: [
       "C of O and Governor's Consent processing",
       "Excision and Gazette regularization",
@@ -234,7 +234,7 @@ export const services: Service[] = [
       },
       {
         title: "Handover",
-        description: "Original documents are delivered directly to the buyer — not held indefinitely \"in process.\"",
+        description: "Original documents are delivered directly to the buyer, not held indefinitely \"in process.\"",
       },
     ],
     faqs: [
@@ -244,7 +244,7 @@ export const services: Service[] = [
       },
       {
         q: "Can you perfect title on land I already own?",
-        a: "Yes — this service isn't limited to DreamMakers estates. We take on title regularization independently.",
+        a: "Yes. This service isn't limited to DreamMakers estates. We take on title regularization independently.",
       },
     ],
   },

@@ -5,8 +5,8 @@ import { WhatsAppLink } from "@/components/layout/WhatsAppLink";
 import { nap } from "@/lib/nav";
 
 export const metadata = {
-  title: "DreamMakers Lakowe Office — Address & Directions",
-  description: "DreamMakers Real Estate Ltd's Lakowe office — address, phone, email and directions.",
+  title: "DreamMakers Lakowe Office: Address & Directions",
+  description: "DreamMakers Real Estate Ltd's Lakowe office, with address, phone, email and directions.",
 };
 
 export default function LakoweOfficePage() {

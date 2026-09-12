@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return { title: "Post not found" };
 
   return {
-    title: `${post.title} — DreamMakers Insights`,
+    title: `${post.title}: DreamMakers Insights`,
     description: post.excerpt,
   };
 }

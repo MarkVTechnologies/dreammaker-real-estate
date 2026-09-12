@@ -25,7 +25,7 @@ export function PartnersSection() {
           </h2>
           <p className="mt-4 text-lg text-ink-600">
             We work alongside respected realtor networks and real estate partners across Nigeria to
-            get every estate delivered — and every buyer looked after.
+            get every estate delivered, and every buyer looked after.
           </p>
         </Reveal>
 

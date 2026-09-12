@@ -5,7 +5,7 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { services } from "@/lib/services";
 
 export const metadata = {
-  title: "Real Estate Services — Development, Construction & Project Management",
+  title: "Real Estate Services: Development, Construction & Project Management",
   description:
     "DreamMakers' services: property development, construction management, project management, property management and title perfection.",
 };
@@ -14,12 +14,12 @@ const differentiators = [
   {
     icon: ShieldCheck,
     title: "In-house, not outsourced",
-    description: "Development, construction and title work are handled by our own team — not handed off to a rotating cast of contractors.",
+    description: "Development, construction and title work are handled by our own team, not handed off to a rotating cast of contractors.",
   },
   {
     icon: CalendarCheck,
     title: "Fixed timelines",
-    description: "Every project runs against a published schedule, with delays communicated as they happen — not discovered after the fact.",
+    description: "Every project runs against a published schedule, with delays communicated as they happen, not discovered after the fact.",
   },
   {
     icon: FileSearch,
@@ -37,7 +37,7 @@ const process = [
   {
     step: "01",
     title: "Consultation",
-    description: "We scope what you need — a single service or full-cycle delivery — and give you a written estimate and timeline.",
+    description: "We scope what you need (a single service or full-cycle delivery) and give you a written estimate and timeline.",
   },
   {
     step: "02",
@@ -52,7 +52,7 @@ const process = [
   {
     step: "04",
     title: "Handover",
-    description: "Documentation, keys and — where applicable — ongoing property management are handed over on completion.",
+    description: "Documentation, keys and (where applicable) ongoing property management are handed over on completion.",
   },
 ];
 
@@ -78,7 +78,7 @@ export default function ServicesHubPage() {
             <p className="mx-auto mt-6 max-w-xl text-lg text-navy-100">
               From acquiring the land to handing over the keys, DreamMakers runs development,
               construction, project management, property management and title perfection as
-              one team — not five separate vendors.
+              one team, not five separate vendors.
             </p>
           </Reveal>
           <Reveal delay={0.1} className="mt-8 flex flex-wrap items-center justify-center gap-4">

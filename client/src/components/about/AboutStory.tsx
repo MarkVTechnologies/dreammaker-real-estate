@@ -14,7 +14,7 @@ export function AboutStory() {
             <p>
               DreamMakers Real Estate Ltd was founded on a simple frustration shared by too many
               Nigerians: paying for land that never comes with a clean title, or an estate that
-              stalls halfway through construction. We set out to build the opposite — every
+              stalls halfway through construction. We set out to build the opposite: every
               plot documented, every allocation traceable, every promise followed through to a
               physical handover.
             </p>
@@ -22,7 +22,7 @@ export function AboutStory() {
               What started as a small team walking prospective buyers through bush plots on the
               Lekki–Epe corridor has grown into a company with a permanent office, an active
               realtor network, and a pipeline of estates in active development across Lagos and
-              Ogun State — without ever losing the plot-by-plot accountability we started with.
+              Ogun State, without ever losing the plot-by-plot accountability we started with.
             </p>
           </div>
         </Reveal>

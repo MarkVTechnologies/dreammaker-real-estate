@@ -5,7 +5,7 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { advisoryBoard, executiveTeam, type TeamMember } from "@/lib/team";
 
 export const metadata = {
-  title: "Leadership — Ejieh Paradise Godstime, Managing Director",
+  title: "Leadership: Ejieh Paradise Godstime, Managing Director",
   description:
     "Meet DreamMakers' Managing Director Ejieh Paradise Godstime and the executive team and advisory board leading the company's estates across Lagos and Ogun State.",
 };
@@ -68,7 +68,7 @@ export default function LeadershipPage() {
             The people behind DreamMakers
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-lg text-ink-600">
-            Named leadership, real credentials — the executive team and advisory board running
+            Named leadership and real credentials: the executive team and advisory board running
             DreamMakers' estates day to day.
           </p>
         </Reveal>
@@ -143,7 +143,7 @@ export default function LeadershipPage() {
               Want to talk to the team directly?
             </h2>
             <p className="mt-4 text-lg text-ink-600">
-              Book a physical inspection or reach out on WhatsApp — no scripts, just straight
+              Book a physical inspection or reach out on WhatsApp. No scripts, just straight
               answers from the people running the company.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

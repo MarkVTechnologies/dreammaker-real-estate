@@ -10,7 +10,7 @@ import { categories, categorySlug, formatPostDate } from "@/lib/insights";
 export const dynamic = "force-dynamic";
 
 export const metadata = {
-  title: "Insights — DreamMakers Real Estate Blog",
+  title: "Insights: DreamMakers Real Estate Blog",
   description: "Market reports, estate progress updates, buying guides and location guides from DreamMakers Real Estate Ltd.",
 };
 
@@ -26,7 +26,7 @@ export default async function InsightsIndexPage() {
         <Reveal>
           <h1 className="font-display text-4xl font-bold text-navy-900 sm:text-5xl">Insights</h1>
           <p className="mt-4 max-w-xl text-lg text-ink-600">
-            Buying guides, location breakdowns, market reports and estate updates — written from
+            Buying guides, location breakdowns, market reports and estate updates, written from
             what we actually see selling and building land in Lagos and Ogun State.
           </p>
         </Reveal>
@@ -93,7 +93,7 @@ export default async function InsightsIndexPage() {
           <Reveal delay={0.1}>
             <div className="mt-12 flex flex-col items-center gap-3 rounded-xl border border-dashed border-ink-300 bg-navy-50 px-6 py-16 text-center">
               <FileText className="h-8 w-8 text-navy-400" aria-hidden="true" strokeWidth={1.5} />
-              <p className="text-sm text-ink-600">No posts yet — check back soon.</p>
+              <p className="text-sm text-ink-600">No posts yet. Check back soon.</p>
             </div>
           </Reveal>
         ) : null}

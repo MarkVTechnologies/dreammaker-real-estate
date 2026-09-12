@@ -3,7 +3,7 @@ import { BadgeCheck, Clock, MapPin, ShieldCheck } from "lucide-react";
 const items = [
   { icon: BadgeCheck, label: "CAC Registered" },
   { icon: ShieldCheck, label: "Verified Titles" },
-  { icon: MapPin, label: "Physical Office — Lakowe" },
+  { icon: MapPin, label: "Physical Office, Lakowe" },
   { icon: Clock, label: "Est. 2015" },
 ];
 

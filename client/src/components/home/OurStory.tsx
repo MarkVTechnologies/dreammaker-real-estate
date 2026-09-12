@@ -19,7 +19,7 @@ export function OurStory() {
             See why the Lekki–Epe corridor trusts DreamMakers
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-navy-100">
-            Estate developments, allocation days and the people behind them —
+            Estate developments, allocation days and the people behind them,
             on camera, not just on paper.
           </p>
         </Reveal>
@@ -31,7 +31,7 @@ export function OurStory() {
               <span className="flex h-16 w-16 items-center justify-center rounded-full bg-gold-500 text-navy-950 transition-transform duration-300 group-hover:scale-105">
                 <Play className="h-6 w-6" aria-hidden="true" fill="currentColor" />
               </span>
-              <span className="text-sm font-medium text-navy-200">Estate walkthrough — video pending</span>
+              <span className="text-sm font-medium text-navy-200">Estate walkthrough: video pending</span>
             </div>
           </div>
         </Reveal>
@@ -55,10 +55,10 @@ export function OurStory() {
             </p>
             <p className="mt-2 font-display text-lg text-white">
               &ldquo;We started DreamMakers because too many people paid for land in Lagos and Ogun
-              they could never build on — no title, no allocation, and no one to call when it went
+              they could never build on: no title, no allocation, and no one to call when it went
               wrong. Every estate we sell now starts with a documented title, not a promise, and
               it&apos;s backed by a team you can walk into our Lakowe office and meet. That
-              standard isn&apos;t for marketing — it&apos;s the one I&apos;d want if I were the one
+              standard isn&apos;t for marketing; it&apos;s the one I&apos;d want if I were the one
               buying.&rdquo;
             </p>
             <p className="mt-3 text-sm font-semibold text-white">Ejieh Paradise Godstime</p>

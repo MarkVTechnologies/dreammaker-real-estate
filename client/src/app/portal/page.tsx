@@ -13,7 +13,7 @@ export default async function PortalDashboardPage() {
   return (
     <PageStub
       title="Your dashboard"
-      intro="Your realtor dashboard — referrals, pipeline, earnings, inventory sheets and marketing assets in one place."
+      intro="Your realtor dashboard: referrals, pipeline, earnings, inventory sheets and marketing assets in one place."
     />
   );
 }

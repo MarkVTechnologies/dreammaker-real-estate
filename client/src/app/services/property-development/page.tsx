@@ -4,7 +4,7 @@ import { services } from "@/lib/services";
 export const metadata = {
   title: "Property Development Company in Lagos",
   description:
-    "DreamMakers' property development capability on the Lekki–Epe corridor — land acquisition, layout planning, government approvals and phased release.",
+    "DreamMakers' property development capability on the Lekki–Epe corridor, covering land acquisition, layout planning, government approvals and phased release.",
 };
 
 export default function PropertyDevelopmentPage() {

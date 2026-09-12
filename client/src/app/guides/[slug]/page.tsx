@@ -31,7 +31,7 @@ export default async function GuidePage({ params }: Props) {
   return (
     <PageStub
       title={slug}
-      intro="This guide is being finalized — check back soon, or reach out to our team for the answer today."
+      intro="This guide is being finalized. Check back soon, or reach out to our team for the answer today."
     />
   );
 }
