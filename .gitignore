@@ -14,3 +14,6 @@ server/dist/
 
 # Prisma
 server/prisma/*.db
+
+# Local Netlify folder
+.netlify
