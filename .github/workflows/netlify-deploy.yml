@@ -1,0 +1,35 @@
+name: Deploy client to Netlify
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "client/**"
+      - "netlify.toml"
+      - ".github/workflows/netlify-deploy.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: netlify-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: client
+    env:
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      NETLIFY_SITE_ID: ae01be35-3efc-4b4c-b26a-1db4b6e8fd6c
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: client/package-lock.json
+      - run: npm ci
+      - run: npm install -g netlify-cli
+      # Builds locally on the runner (site env vars are pulled from Netlify) and uploads the result.
+      - run: netlify deploy --prod
