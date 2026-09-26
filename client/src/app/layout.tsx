@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { MetaPixel } from "@/components/layout/MetaPixel";
 import { MobileStickyBar } from "@/components/layout/MobileStickyBar";
 import { PartnersSection } from "@/components/layout/PartnersSection";
 import { WhatsAppWidget } from "@/components/layout/WhatsAppWidget";
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Footer />
           <MobileStickyBar />
           <WhatsAppWidget />
+          <MetaPixel />
         </body>
       </html>
     </ClerkProvider>
